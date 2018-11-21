@@ -1,0 +1,29 @@
+<!--pages/searchInnings/searchInnings.wxml-->
+<view class="page">
+    <view class="search">
+        <view class="flex-average">
+            <view class="flex search-left">
+                <image class="inputSearchImg" src="/images/search.png"></image>
+                <view>
+                    <input placeholder="搜索您想加入什么局" bindinput="searchInput"></input>
+                </view>
+            </view>
+            <view class="flex search-right" bindtap="searchButton">
+                <text>搜索</text>
+            </view>
+        </view>
+    </view>
+    <view hidden="{{showHistory}}">
+        <view class="h-text">历史记录</view>
+        <view class="menu">
+            <block wx:for="{{historyDatas}}" wx:for-item="item" wx:key="**this">
+                <view class="menu-list hr" data-val="{{item}}" bindtap="searchButton">
+                    <view class="menu-left">
+                        <text>{{item}}</text>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="button" bindtap="clearHistory">清空历史记录</view>
+    </view>
+</view>

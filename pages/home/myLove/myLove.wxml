@@ -1,0 +1,9 @@
+<!--pages/myLove/myLove.wxml-->
+<view class="page">
+    <view class="list">
+        <block wx:for="{{list}}" wx:for-item="item" wx:key="**this">
+            <text bindtap="selected" data-id="{{item.id}}" class="{{item.active}}">{{item.name}}</text>
+        </block>
+    </view>
+    <button bindtap="clickon">确定</button>
+</view>

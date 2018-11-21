@@ -1,0 +1,36 @@
+/* pages/album/album.wxss */
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list>view {
+    width: 168rpx;
+    height: 168rpx;
+    margin: 40rpx 36rpx 0;
+    position: relative;
+}
+
+.list>view>image {
+    width: 168rpx;
+    height: 168rpx;
+}
+
+.delbutton {
+    position: absolute;
+    right: -17rpx;
+    top: -17rpx;
+    width: 34rpx;
+    height: 34rpx;
+    border-radius: 50%;
+}
+
+.delbutton>image {
+    width: 34rpx;
+    height: 34rpx;
+}
+
+.btn {
+    margin: 40rpx 60rpx 40rpx;
+}

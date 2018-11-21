@@ -1,0 +1,28 @@
+<!--pages/create/selectAddress/selectAddress.wxml-->
+<view class="page">
+    <view class="menu">
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>地点名称</text>
+            </view>
+            <view class="menu-center flex">
+                <input value="{{placeName}}" bindinput="placeName"></input>
+            </view>
+            <view class="menu-right">
+            </view>
+        </view>
+        <view class="menu-list flex-average">
+            <view class="menu-left">
+                <text>地址</text>
+            </view>
+            <view class="menu-center flex">
+                <input value="{{address}}" bindinput="address"></input>
+            </view>
+            <view class="menu-right" bindtap="selectMapAddress">
+                <view>选择</view>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+    </view>
+    <button class="btn" bindtap="query_ok">确定</button>
+</view>

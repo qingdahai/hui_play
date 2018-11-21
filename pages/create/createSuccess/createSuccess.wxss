@@ -1,0 +1,87 @@
+/* pages/create/createSuccess.wxss */
+
+.page-head {
+    background: #fff;
+    padding: 20rpx 32rpx;
+}
+
+.page-head-right view {
+    position: relative;
+    top: -4rpx;
+}
+
+.page-head-right view:first-child {
+    border: 2rpx solid #3670fb;
+    border-radius: 8rpx;
+    color: #3670fb;
+    padding: 8rpx 16rpx;
+    margin-right: 40rpx;
+}
+
+.page-head-right view:last-child {
+    background: #3670fb;
+    border-radius: 8rpx;
+    color: #fff;
+    padding: 8rpx 16rpx;
+}
+
+/**/
+
+.inningsList {
+    background: #fff;
+    height: 90rpx;
+    padding: 20rpx 32rpx;
+}
+
+.creater {
+    margin-right: 64rpx;
+    position: relative;
+}
+
+.creater image {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+
+.creater text {
+    position: absolute;
+    background: #3670fb;
+    color: #fff;
+    text-align: center;
+    border: 2rpx solid #fff;
+    border-radius: 200rpx;
+    width: 76rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    right: -36rpx;
+    bottom: 0;
+}
+
+.otherList>view {
+    margin-right: 64rpx;
+    position: relative;
+}
+
+.otherList image {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+
+.textActive {
+    background: #fff;
+    padding: 20rpx 32rpx;
+    border-top: 2rpx solid rgba(0, 0, 0, 0.06);
+    border-bottom: 2rpx solid rgba(0, 0, 0, 0.06);
+}
+
+.textActive text {
+    display: block;
+}
+
+.textActive text:last-child {
+    line-height: 44rpx;
+    color: rgba(0, 0, 0, 0.4);
+    margin-top: 18rpx;
+}

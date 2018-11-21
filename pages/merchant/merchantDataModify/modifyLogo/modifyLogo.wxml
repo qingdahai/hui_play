@@ -1,0 +1,12 @@
+<!--pages/merchant/merchantDataModify/modifyLogo.wxml-->
+<view style="position:absolute;width:100%;height:100%;overflow:hidden">
+    <block wx:if="{{ratio >= 1}}">
+        <image src="{{imgUrl}}" style="width:{{windowHeight*ratio}}px;height:{{windowHeight}}px"></image>
+    </block>
+    <block wx:else>
+        <image src="{{imgUrl}}" style="width:{{windowWidth}}px;height:{{windowWidth/ratio}}px"></image>
+    </block>
+    <view class="layer"></view>
+    <canvas canvas-id="myCanvas"></canvas>
+</view>
+<button bindtap="clipImg">确定</button>

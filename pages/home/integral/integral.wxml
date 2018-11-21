@@ -1,0 +1,31 @@
+<!--pages/integral/integral.wxml-->
+<view class="page">
+    <view class="page-head">
+        <view>剩余组局分</view>
+        <view class="text">
+            <image src="/images/money.png"></image>
+            <text>{{integralData.gameIntegral}}</text>
+        </view>
+    </view>
+
+    <view class="menu">
+        <view class="menu-list flex-average hr" bindtap="gameIntegral">
+            <view class="menu-left">
+                <text>组局分记录</text>
+            </view>
+            <view class="menu-right">
+                <text></text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average" bindtap="integral">
+            <view class="menu-left">
+                <text>积分</text>
+            </view>
+            <view class="menu-right">
+                <text>{{integralData.integral}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

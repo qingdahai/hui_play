@@ -1,0 +1,59 @@
+<!--pages/create/selectMerchantMsg/selectMerchantMsg.wxml-->
+<view class="page">
+    <!-- 顶部轮播图 -->
+    <view class="crousel">
+        <swiper autoplay="true" interval="2000" bindchange="bindchange">
+            <block wx:for="{{shopInfo.shopPhotoList}}" wx:for-item="item" wx:key="**this">
+                <swiper-item>
+                    <image src="{{item.imageUrl}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view>{{imgIndex+1}}/{{shopInfo.shopPhotoList.length}}</view>
+    </view>
+    <view class="shopInfo-header">
+        <view class="flex hr">
+            <view class="logo">
+                <image class="logoimg" src="{{shopInfo.logo}}"></image>
+                <image class="vip" src="/images/vip.png"></image>
+            </view>
+            <view class="shopInfo-header-right">
+                <view>{{shopInfo.shopName}}</view>
+                <view>
+                    <image src="/images/position_gay.png"></image>{{shopInfo.address}}
+                </view>
+            </view>
+        </view>
+        <view class="flex-average hr">
+            <view>
+                <image src="/images/time_gay.png"></image>{{shopInfo.startTime}}-{{shopInfo.endTime}}
+            </view>
+            <view>
+                <image src="/images/phone_gay.png"></image>{{shopInfo.phone}}
+            </view>
+        </view>
+    </view>
+    <view class="menux">
+        <view>店铺介绍</view>
+        <view>{{shopInfo.shopInfo}}</view>
+    </view>
+    <view class="menu">
+        <block wx:for="{{shopInfo.shopMealList}}" wx:for-item="item" wx:key="**this">
+            <view class="menu-list flex-average hr">
+                <view>{{item.mealName}}</view>
+                <view>
+                    <view class="flex">
+                        <text>￥{{item.price}}/人</text>（还剩{{item.surplusNum}}）
+                        <view class="flex itemType">
+                            <view data-id="{{item.id}}" bindtap="selectType">
+                                <image src="{{selectId==item.id?'/images/right_blue.png':''}}"></image>
+                            </view>
+                            <text>{{item.name}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <button class="btn" bindtap="query_ok">确定</button>
+</view>

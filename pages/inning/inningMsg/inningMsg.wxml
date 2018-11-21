@@ -1,0 +1,111 @@
+<!--pages/inningsMsg/inningsMsg.wxml-->
+
+<view class="page">
+
+    <view class="box">
+        <view class="box-top">
+            <block wx:if="{{inningData.labelId == 1}}">
+                <image class="bg-img" src="/images/lr_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelId == 2}}">
+                <image class="bg-img" src="/images/yd_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelId == 3}}">
+                <image class="bg-img" src="/images/cc_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelId == 4}}">
+                <image class="bg-img" src="/images/bd_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelId == 5}}">
+                <image class="bg-img" src="/images/cg_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelId == 6}}">
+                <image class="bg-img" src="/images/d_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelId == 7}}">
+                <image class="bg-img" src="/images/sg_bg.png"></image>
+            </block>
+            <block wx:else>
+                <image class="bg-img" src="/images/dy_bg.png"></image>
+            </block>
+            <view class="flex-average text-head">
+                <text class="text1">{{inningData.labelName}}·{{inningData.classifyName}}</text>
+                <text>{{inningData.nowNum}}/{{inningData.maxNum}}</text>
+            </view>
+            <text class="text2">{{inningData.title}}</text>
+            <view class="text-time">
+                <image src="/images/time_write.png" class="icon-clock"></image>
+                <block wx:if="{{countDownTime}}">
+                    {{countDownTime}}
+                </block>
+                <block wx:else>
+                    {{inningData.startTime_zh}}
+                </block>
+            </view>
+        </view>
+        <view class="box-bottom">
+            <view>房间号：{{inningData.chatroomId}}</view>
+            <view class="flex">
+                <image src="/images/position_gay.png"></image>
+                <text>距您：{{inningData.distance}}KM</text>
+            </view>
+        </view>
+    </view>
+
+    <scroll-view class="flex inningsList" scroll-x="true">
+        <view class="flex">
+            <view class="creater" bindtap="friendMsg" data-id="{{inningData.gameUserList[0].userId}}">
+                <block wx:if="{{inningData.gameUserList[0].headUrl}}">
+                    <image src="{{inningData.gameUserList[0].headUrl}}"></image>
+                </block>
+                <block wx:else>
+                    <image src="/images/logo.png"></image>
+                </block>
+                <text>局主</text>
+            </view>
+            <view class="flex otherList">
+                <block wx:for="{{inningData.gameUserList}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                    <block wx:if="{{index>=1}}">
+                        <view bindtap="friendMsg" data-id="{{item.userId}}">
+                            <block wx:if="{{item.headUrl}}">
+                                <image src="{{item.headUrl}}"></image>
+                            </block>
+                            <block wx:else>
+                                <image src="/images/logo.png"></image>
+                            </block>
+                            <text class="active"></text>
+                        </view>
+                    </block>
+                </block>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="textActive">
+        <text>活动介绍</text>
+        <text>{{inningData.info}}</text>
+    </view>
+    <view class="merchant">
+        <view class="flex merchant-head">
+            <view>
+                <block wx:if="{{shopData.logo}}">
+                    <image src="{{shopData.logo}}"></image>
+                </block>
+                <block wx:else>
+                    <image src="/images/logo.png"></image>
+                </block>
+                <image src="/images/vip.png"></image>
+            </view>
+            <view>
+                <block wx:if="{{shopData}}">
+                    <view>{{shopData.shopName}}</view>
+                    <view>{{shopData.address}}</view>
+                </block>
+                <block wx:else>
+                    <view>{{inningData.gameName}}</view>
+                    <view>{{inningData.address}}</view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <button class="btn" bindtap="joinInning">入局</button>
+</view>

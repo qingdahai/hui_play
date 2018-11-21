@@ -1,0 +1,453 @@
+/* 所有页面默认样式 */
+
+.page {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    font-size: 28rpx;
+    background: #f7f7f7;
+    color: #000;
+}
+
+.flex {
+    display: flex;
+}
+
+/* 左右布局 */
+
+.flex-average {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 单个组局样式 */
+
+/* 
+<view class="inning-box">
+        <view class="inning-top">
+            <image class="bg-img" src="/images/lr_bg.png"></image>
+            <view class="text-header flex-average">
+                <view>标题</view>
+                <view>局人数信息</view>
+            </view>
+            <view class="text-center">文字描述</view>
+            <view class="text-footer flex">
+                <image src="/images/time_write.png"></image>
+                <view>时间</view>
+            </view>
+        </view>
+        <view class="inning-bottom flex-average">
+            <view class="inning-bottom-left flex">
+                <image src="/images/test.png">商家LOGO</image>（可不要）
+                <view>
+                    <view>商家标题</view>
+                    <view class="inning-bottom-text">
+                        <image src="/images/position_gay.png"></image>
+                        <text>商家地址</text>
+                    </view>
+                </view>
+            </view>
+            <view class="inning-bottom-right flex">（可不要）
+                <image src="/images/lightning.png"></image>
+                <view>是否火线救急</view>
+            </view>
+        </view>
+    </view>
+ */
+
+.inning-box {
+    margin: 40rpx 4.3%;
+}
+
+.inning-top {
+    height: 178rpx;
+    /* 文字达到限定最大字数会与时间重合一部分，改变高度会使图片变形 *//* height: 200rpx; */
+    position: relative;
+    color: #fff;
+    padding: 36rpx;
+}
+
+.inning-top .bg-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.inning-top>view {
+    position: relative;
+    z-index: 99;
+}
+
+.inning-top .text-header {
+}
+
+.inning-top .text-header view:first-child {
+    font-size: 40rpx;
+    line-height: 28px;
+}
+
+.inning-top .text-header view:last-child {
+    font-size: 24rpx;
+}
+
+.inning-top .text-center {
+}
+
+.inning-top .text-footer {
+    position: absolute;
+    bottom: 36rpx;
+}
+
+.inning-top .text-footer image {
+    width: 24rpx;
+    height: 24rpx;
+    margin-right: 12rpx;
+    margin-top: 6rpx;
+}
+
+.inning-top .text-footer view {
+    font-size: 24rpx;
+}
+
+.inning-bottom {
+    background: #fff;
+    padding: 24rpx 36rpx;
+    min-height: 72rpx;
+}
+
+.inning-bottom-left {
+    align-items: center;
+}
+
+.inning-bottom .inning-bottom-left>view {
+    max-width: 500rpx;
+}
+
+.inning-bottom .inning-bottom-left image {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+    margin-right: 12rpx;
+}
+
+.inning-bottom .inning-bottom-left .inning-bottom-text image {
+    width: 18rpx;
+    height: 20rpx;
+    margin-right: 10rpx;
+}
+
+.inning-bottom .inning-bottom-left .inning-bottom-text text {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.inning-bottom .inning-bottom-right {
+    align-items: center;
+    color: #f00;
+}
+
+.inning-bottom .inning-bottom-right image {
+    width: 28rpx;
+    height: 34rpx;
+    margin-right: 8rpx;
+}
+
+.inning-bottom .inning-bottom-right view {
+    height: 34rpx;
+    line-height: 34rpx;
+}
+
+/* 搜索通用（首页、地图） */
+
+/*
+    <view class="search">
+        <view class="flex-average">
+            <view class="flex search-left">
+                <image class="inputSearchImg" src="/images/search.png"></image>
+                <view>
+                    <input placeholder="输入框提示"></input>
+                </view>
+            </view>
+            <view class="flex search-right">
+                <view>|</view>
+                <text>下拉菜单</text>
+                <image src='/images/drop_down.png'></image>
+            </view>
+        </view>
+    </view>
+*/
+
+.search {
+    background: #fff;
+    padding: 20rpx 32rpx;
+}
+
+.search>view {
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+.search-left {
+    display: flex;
+    align-items: center;
+}
+
+.search-left image {
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 12rpx;
+    margin-left: 20rpx;
+}
+
+.search-left input {
+    /* 宽度需要根据后面调整 */
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+.search-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-right view {
+    height: 60rpx;
+    line-height: 60rpx;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.search-right text {
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-left: 21rpx;
+    margin-right: 10rpx;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.search-right image {
+    width: 20rpx;
+    height: 12rpx;
+    margin-right: 12rpx;
+}
+
+/* 主要在home的菜单列表 */
+
+/*
+   <view class="menu">
+        <view class="menu-list flex-average hr">（hr为当前下划线）
+            <view class="menu-left">
+                <image src="/images/man_icon.png"></image>（左边图标）
+                <text>左边文字</text>
+            </view>
+            <view class="menu-right">
+                <text>右边文字</text>
+                <image src="/images/drop_right.png"></image>（右边图标）
+            </view>
+        </view>
+    </view>
+*/
+
+.menu {
+    margin-bottom: 20rpx;
+    padding: 0 32rpx;
+    background: #fff;
+}
+
+.menu .menu-list {
+    padding: 28rpx 0;
+}
+
+.menu .menu-list .menu-left {
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+.menu .menu-list .menu-left image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+}
+
+.menu .menu-list .menu-right {
+    color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+}
+
+/* .menu .menu-list .menu-right {
+    display: flex;
+    max-width: 500rpx;
+}
+
+.menu .menu-list .menu-right text {
+    max-width: 500rpx;
+    color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+} */
+
+.menu .menu-list .menu-right image {
+    width: 18rpx;
+    height: 28rpx;
+    margin-left: 21rpx;
+}
+
+.hr {
+    border-bottom: 2rpx solid #f7f7f7;
+}
+
+/* 文本通用 */
+
+.txt-center {
+    text-align: center;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+/* 清除默认滚动条 */
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+/* 自定义模态弹出框 */
+
+/*
+<view class="myModal">
+    <view class="myModal-body">
+        <view class="myModal-head"></view>
+        <view class="myModal-cont"></view>
+        <view class="myModal-foot"></view>
+    </view>
+</view>
+*/
+
+.myModal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999000;
+}
+
+.myModal .myModal-body {
+    position: fixed;
+    top: 45%;
+    left: 0;
+    z-index: 999500;
+    background: #fff;
+    margin: -180rpx 70rpx;
+    width: 600rpx;
+    min-height: 200rpx;
+}
+
+.myModal .myModal-head {
+    height: 92rpx;
+    line-height: 92rpx;
+    text-align: center;
+    background-image: linear-gradient(-136deg, #3670fb 4%, #4954e0 97%);
+    color: #fff;
+}
+
+.myModal .myModal-cont, .myModal-foot {
+    padding: 0 40rpx;
+}
+
+.myModal button {
+    background: #3670fb;
+    color: #fff;
+}
+
+/**/
+
+/*
+<view class="center-hr">
+    <view></view>
+    <text>文字</text>
+</view>
+*/
+
+.center-hr {
+    text-align: center;
+    position: relative;
+}
+
+.center-hr view {
+    background: rgba(0, 0, 0, 0.1);
+    height: 3rpx;
+    top: 21rpx;
+    position: relative;
+}
+
+.center-hr text {
+    background: #fff;
+    padding: 0 20rpx;
+    position: relative;
+    z-index: 9999;
+}
+
+/**/
+
+.textarea {
+    position: relative;
+    width: 100%;
+    padding: 1.5% 4.3%;
+    margin-top: 20rpx;
+    background: #fff;
+}
+
+.textarea textarea {
+    width: 91.4%;
+    height: 100%;
+}
+
+.textarea textarea view {
+    position: absolute;
+    right: 40rpx;
+    bottom: 20rpx;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/**/
+
+.btn {
+    color: #fff;
+    background: #3670fb;
+    border-radius: 4px;
+}
+
+/* 自定义选择 */
+
+/*
+<view class="radio {{currentTab==index?'active':''}}">
+    <image hidden="{{currentTabImg==index?false:true}}" src="/images/right_blue.png"></image>
+</view>
+*/
+
+.radio {
+    width: 36rpx;
+    height: 36rpx;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.radio.active {
+    border-color: #3670fb;
+}
+
+.radio image {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+/* picker view 在时间选择的时候 */
+.flex-picker view {
+    display: inline-block;
+}

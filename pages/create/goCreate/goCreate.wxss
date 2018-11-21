@@ -1,0 +1,11 @@
+/* pages/goCreate/goCreate.wxss */
+
+textarea {
+    height: 80rpx;
+}
+
+.btn {
+    margin: 84rpx 56rpx 110rpx 58rpx;
+}
+
+

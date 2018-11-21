@@ -1,0 +1,54 @@
+/* pages/modify/modifyPhoneNumber/modifyPhoneNumber.wxss */
+
+.list0 {
+    padding: 0 32rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.hr {
+    border-bottom: 2rpx solid #f7f7f7;
+    padding: 28rpx 0;
+}
+
+.list1 {
+    padding: 28rpx 32rpx;
+    background: #fff;
+}
+
+.phone-img {
+    width: 24rpx;
+    height: 36rpx;
+    margin-top: 10rpx;
+    margin-right: 40rpx;
+}
+
+.message-img {
+    width: 32rpx;
+    height: 24rpx;
+    margin-top: 14rpx;
+    margin-right: 36rpx;
+}
+
+.getPhoneVerifyCodeBtn {
+    color: #fff;
+    background: #3670fb;
+    width: 180rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border-radius: 4px;
+}
+
+input {
+    width: 400rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+button {
+    color: #fff;
+    background: #3670fb;
+    border-radius: 4px;
+    margin: 340rpx 58rpx;
+}

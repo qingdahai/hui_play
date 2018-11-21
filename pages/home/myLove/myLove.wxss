@@ -1,0 +1,29 @@
+/* pages/myLove/myLove.wxss */
+
+.list {
+    padding: 20rpx;
+}
+
+text{
+    padding: 12rpx 40rpx;
+    background: #fff;
+    border-radius: 4px;
+    color: #000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
+    float: left;
+    margin-right: 30rpx;
+    margin-bottom: 30rpx;
+}
+text.active{
+    background: #3670fb;
+    color: #fff;
+}
+
+button {
+    position: absolute;
+    bottom: 7.8%;
+    width: 84.8%;
+    left: 7.7%;
+    background: #3670fb;
+    color: #fff;
+}

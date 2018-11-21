@@ -1,0 +1,9 @@
+/* pages/myInningsDetails/inningMealList/inningMealList.wxss */
+
+.menu-right text:first-child {
+    color: #ff3737;
+}
+
+.menu-right text:last-child {
+    color: rgba(0, 0, 0, 0.8);
+}

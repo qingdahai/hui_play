@@ -1,0 +1,86 @@
+<!--pages/myInningsDetails/underway/underway.wxml-->
+<view class="page">
+    <view class="tips">已成局</view>
+    <scroll-view class="flex inningsList" scroll-x="true">
+        <view class="flex">
+            <view class="creater">
+                <block wx:if="{{inningInfo.gameUserList[0].headUrl}}">
+                    <image src="{{inningInfo.gameUserList[0].headUrl}}"></image>
+                </block>
+                <block wx:else>
+                    <image src="/images/logo.png"></image>
+                </block>
+                <text>局主</text>
+            </view>
+            <view class="flex otherList">
+                <block wx:for="{{inningInfo.gameUserList}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                    <view wx:if="{{index != 0}}">
+                        <block wx:if="{{item.headUrl}}">
+                            <image src="{{item.headUrl}}"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="/images/logo.png"></image>
+                        </block>
+                        <view class="radio {{currentTab==item?'active':''}}" hidden="{{showAdmin}}" data-id="{{item}}" bindtap="selectInningPer">
+                            <image hidden="{{currentTabImg==item?false:true}}" src="/images/right_blue.png"></image>
+                        </view>
+                    </view>
+                </block>
+                <!-- <view>
+                    <image src="/images/test.png"></image>
+                    <view class="radio {{currentTab==1?'active':''}}" hidden="{{showAdmin}}">
+                        <image hidden="{{currentTabImg==1?false:true}}" src="/images/right_blue.png"></image>
+                    </view>
+                </view> -->
+                <!-- <view>
+                    <image src="/images/test.png"></image>
+                    <text hidden="{{showAdmin}}"></text>
+                </view>
+                <view>
+                    <image src="/images/test.png"></image>
+                    <text hidden="{{showAdmin}}"></text>
+                </view>
+                <view>
+                    <image src="/images/test.png"></image>
+                    <text hidden="{{showAdmin}}"></text>
+                </view>
+                <view>
+                    <image src="/images/test.png"></image>
+                    <text hidden="{{showAdmin}}"></text>
+                </view>
+                <view>
+                    <image src="/images/test.png"></image>
+                    <text hidden="{{showAdmin}}"></text>
+                </view> -->
+            </view>
+        </view>
+    </scroll-view>
+    <view class="list">
+        <view class="flex-average">
+            <text>局名称</text>
+            <text>{{inningInfo.gameName}}</text>
+        </view>
+    </view>
+    <view class="list">
+        <view class="flex-average">
+            <text>地点</text>
+            <text>{{inningInfo.address}}</text>
+        </view>
+    </view>
+    <view class="list" bindtap="inningMealList">
+        <view class="flex-average">
+            <text>套餐列表</text>
+            <view>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="text">
+        <text>活动介绍</text>
+        <text>{{inningInfo.info}}</text>
+    </view>
+    <view class="flex-average buttons">
+        <view class="exitInning" bindtap="exitInning">退出组局</view>
+        <view class="{{signInInning}}" bindtap="signInInning">{{signInInningVal}}</view>
+    </view>
+</view>

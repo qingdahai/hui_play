@@ -1,0 +1,26 @@
+/* pages/create/selectClassify/selectClassify.wxss */
+
+/**/
+
+.myModal-cont {
+    padding: 56rpx 40rpx !important;
+}
+
+.myModal-cont input {
+    font-size: 24rpx;
+    padding: 28rpx 10rpx 26rpx 12rpx;
+    border: 2rpx solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+
+.myModal-foot button {
+    width: 214rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-bottom: 40rpx;
+}
+
+.myModal-foot button.cancel {
+    background: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.4);
+}

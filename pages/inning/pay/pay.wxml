@@ -1,0 +1,133 @@
+<!--pages/myInningsDetails/pay/pay.wxml-->
+<view class="page">
+    <view class="inning-box" bindtap="inningsMsg">
+        <view class="inning-top">
+            <block wx:if="{{inningData.labelName == '桌游'}}">
+                <image class="bg-img" src="/images/lr_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelName == '户外运动'}}">
+                <image class="bg-img" src="/images/yd_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelName == '聚餐'}}">
+                <image class="bg-img" src="/images/cc_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelName == '夜店'}}">
+                <image class="bg-img" src="/images/bd_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelName == 'KTV'}}">
+                <image class="bg-img" src="/images/cg_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelName == '电竞'}}">
+                <image class="bg-img" src="/images/d_bg.png"></image>
+            </block>
+            <block wx:elif="{{inningData.labelName == '棋牌'}}">
+                <image class="bg-img" src="/images/sg_bg.png"></image>
+            </block>
+            <block wx:else>
+                <image class="bg-img" src="/images/dy_bg.png"></image>
+            </block>
+            <view class="text-header flex-average">
+                <view>{{inningData.labelName}}·{{inningData.classifyName}}</view>
+                <view></view>
+            </view>
+            <view class="text-center">{{inningData.title}}</view>
+            <view class="text-footer flex" hidden="{{hideCreateInning}}">
+                <image src="/images/time_write.png"></image>
+                <view>{{inningData.startTime}}</view>
+            </view>
+        </view>
+        <view class="inning-bottom flex-average">
+            <view class="inning-bottom-left flex">
+                <view>
+                    <view hidden="{{hideCreateInning}}">房间号：{{inningData.chatroomId}}</view>
+                    <view class="inning-bottom-text">
+                        <image src="/images/position_gay.png"></image>
+                        <text>{{inningData.address}}{{inningData.distance!='undefined'?'('+inningData.distance+'KM)':''}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="inning-bottom-right flex">
+                <!-- <image src="/images/lightning.png"></image>
+                <view>火线救急</view> -->
+            </view>
+        </view>
+    </view>
+    <view class="menu">
+        <view class="flex-average nav" bindtap="selectGratuities">
+            <view>小费</view>
+            <view class="flex">
+                <view class="{{red}}">{{gratuities}} </view>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="meal">
+            <view class="flex-average">
+                <view>{{mealData.mealName}}</view>
+                <view>￥{{mealData.price}}/人</view>
+            </view>
+            <view class="flex-average">
+                <view>税价</view>
+                <view>￥{{taxPrice}}/人</view>
+            </view>
+            <view class="flex-average">
+                <view>服务费</view>
+                <view>￥{{serviceCharge}}/人</view>
+            </view>
+            <view class="flex-average">
+                <view>合计</view>
+                <view>￥{{totalPrice}}/人</view>
+            </view>
+        </view>
+        <view class="paySelect">
+            <view>支付方式</view>
+            <view class="flex-average">
+                <view class="flex">
+                    <image src="/images/wechat.png"></image>
+                    <text>微信支付</text>
+                </view>
+                <view class="radio">
+                    <image src="/images/right_blue.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menux">组局分</view>
+    <view class="menu">
+        <view class="flex-average nav" bindtap="useIntegralInput">
+            <view>组局分折扣</view>
+            <view class="flex">
+                <view>{{useIntegralInput}}</view>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+    </view>
+    <button class="btn" bindtap="query_ok">支付入局</button>
+</view>
+<view class="myModal" hidden="{{showModalSelectIntegral}}">
+    <view class="integral">
+        <view class="flex-average head">
+            <view bindtap="myModalCancel">取消</view>
+            <view>当前剩余组局分数：{{}}</view>
+            <view bindtap="myModalOk">确定</view>
+        </view>
+        <view class="flex-average cont">
+            <view>使用：</view>
+            <view class="flex">
+                <view bindtap="myModalMinus">-</view>
+                <input bindinput="inputVal" value="{{useIntegralInput}}"></input>
+                <view bindtap="myModalAdd">+</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="myModal" hidden="{{showModalPaySuccess}}">
+    <view class="myModal-body">
+        <view class="myModal-cont">
+            <image src="/images/successful.png"></image>
+            <view>支付成功</view>
+        </view>
+        <view class="myModal-foot">
+            <button bindtap="paySuccess">确定</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,67 @@
+/* pages/register/register.wxss */
+
+.menu {
+    margin-top: 20rpx;
+}
+
+.menu-left .image1 {
+    width: 24rpx !important;
+    height: 36rpx !important;
+}
+
+.menu-left .image2 {
+    width: 32rpx !important;
+    height: 24rpx !important;
+}
+
+.menu-left .image3 {
+    width: 28rpx !important;
+    height: 34rpx !important;
+}
+
+.menu-center {
+    position: absolute;
+    left: 96rpx;
+    width: 500rpx;
+}
+
+.passwd {
+    text-align: right;
+    margin-right: 32rpx;
+}
+
+button {
+    color: #fff;
+    background: #3670fb;
+    border-radius: 4px;
+    margin: 340rpx 58rpx;
+}
+
+.getPhoneVerifyCodeBtn {
+    /* width: 180rpx; */
+    height: 60rpx;
+    line-height: 60rpx;
+    background: #3670fb;
+    margin: 0;
+    font-size: 28rpx;
+    z-index: 999;
+}
+
+.getPhoneVerifyCodeBtnX {
+    /* width: 180rpx; */
+    height: 60rpx;
+    line-height: 60rpx;
+    background: #999;
+    margin: 0;
+    font-size: 28rpx;
+    z-index: 999;
+}
+
+.myModal-cont view{
+    margin: 80rpx auto !important;
+    text-align: center;
+}
+
+.btn {
+    margin: 0 40rpx 40rpx;
+}

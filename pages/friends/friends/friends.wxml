@@ -1,0 +1,102 @@
+<!--pages/friends/friends.wxml-->
+<view class="page">
+    <view>
+        <scroll-view scroll-x="true" class="tab-head" scroll-left="{{scrollLeft}}">
+            <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">关注</view>
+            <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">粉丝</view>
+            <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">互相关注</view>
+        </scroll-view>
+        <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+            <!-- 关注 -->
+            <swiper-item>
+                <scroll-view scroll-y="true" scroll-into-view="{{scrollIntoView}}" class="scoll-h">
+                    <block wx:for="{{attention}}" wx:for-item="attentionItem" wx:for-index="key" wx:key="**this">
+                        <view id="{{key}}" class="f-box">
+                            <block wx:if="{{key =='ZZ'}}">
+                                <view class="groupHead">#</view>
+                            </block>
+                            <block wx:else>
+                                <view>{{key}}</view>
+                            </block>
+                            <view class="f-box-list">
+                                <view class="f-list" wx:for="{{attentionItem}}" wx:for-item="user" data-id="{{user.id}}" bindtap="friendMessage" wx:key="**this">
+
+                                    <view wx:if="{{user.headUrl}}">
+                                        <image class="f-image" src="{{user.headUrl}}"></image>
+                                    </view>
+                                    <view wx:else>
+                                        <image class="f-image" src="/images/logo.png"></image>
+                                    </view>
+                                    <view class="f-name">{{user.nickname}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </scroll-view>
+            </swiper-item>
+            <!-- 粉丝 -->
+            <swiper-item>
+                <scroll-view scroll-y="true" scroll-into-view="{{scrollIntoView}}" class="scoll-h">
+                    <block wx:for="{{fans}}" wx:for-item="fansItem" wx:for-index="key" wx:key="**this">
+                        <view id="{{key}}" class="f-box">
+                            <block wx:if="{{key =='ZZ'}}">
+                                <view class="groupHead">#</view>
+                            </block>
+                            <block wx:else>
+                                <view>{{key}}</view>
+                            </block>
+                            <view class="f-box-list">
+                                <view class="f-list" wx:for="{{fansItem}}" wx:for-item="user" data-id="{{user.id}}" bindtap="friendMessage" wx:key="**this">
+                                    <view wx:if="{{user.headUrl}}">
+                                        <image class="f-image" src="{{user.headUrl}}"></image>
+                                    </view>
+                                    <view wx:else>
+                                        <image class="f-image" src="/images/logo.png"></image>
+                                    </view>
+                                    <view class="f-name">{{user.nickname}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </scroll-view>
+            </swiper-item>
+            <!-- 互相关注 -->
+            <swiper-item>
+                <scroll-view scroll-y="true" scroll-into-view="{{scrollIntoView}}" class="scoll-h">
+                    <block wx:for="{{friends}}" wx:for-item="friendsItem" wx:for-index="key" wx:key="**this">
+                        <view id="{{key}}" class="f-box">
+                            <block wx:if="{{key =='ZZ'}}">
+                                <view class="groupHead">#</view>
+                            </block>
+                            <block wx:else>
+                                <view>{{key}}</view>
+                            </block>
+                            <view class="f-box-list">
+                                <view class="f-list" wx:for="{{friendsItem}}" wx:for-item="user" data-id="{{user.id}}" bindtap="friendMessage" wx:key="**this">
+                                    <view wx:if="{{user.headUrl}}">
+                                        <image class="f-image" src="{{user.headUrl}}"></image>
+                                    </view>
+                                    <view wx:else>
+                                        <image class="f-image" src="/images/logo.png"></image>
+                                    </view>
+                                    <view class="f-name">{{user.nickname}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <navigator class="btn" style="width:100%;height:100rpx;line-height:100rpx;text-algin:center;" url="/pages/msgCenter/newFriend/newFriend">添加</navigator>
+    <view class="nav" bindtouchmove="touchmove" bindtouchcancel="touchcancel" bindtouchend="touchend">
+        <view class="letter" bindtap="tabLetter" data-index="{{item}}" wx:for="{{letters}}" wx:key="**this">
+            <block wx:if="{{item =='ZZ'}}">
+                <text class="letter-text {{selected == item ? 'letter-actived' : ''}}">#</text>
+            </block>
+            <block wx:else>
+                <text class="letter-text {{selected == item ? 'letter-actived' : ''}}">{{item}}</text>
+            </block>
+        </view>
+    </view>
+</view>

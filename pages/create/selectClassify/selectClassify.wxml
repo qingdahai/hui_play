@@ -1,0 +1,29 @@
+<!--pages/create/selectClassify/selectClassify.wxml-->
+<view class="page">
+    <view class="menu">
+        <block wx:for="{{classify}}" wx:for-item="item" wx:key="**this">
+            <view class="menu-list flex-average hr" bindtap="selectClassify" data-classifyId="{{item.id}}" data-classifyName="{{item.classifyName}}">
+                <view class="menu-left">
+                    <text>{{item.classifyName}}</text>
+                </view>
+            </view>
+        </block>
+        <view class="menu-list flex-average hr" bindtap="selectClassify">
+            <view class="menu-left">
+                <text>自定义</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="myModal" hidden="{{myModalHide}}">
+    <view class="myModal-body">
+        <view class="myModal-head">自定义</view>
+        <view class="myModal-cont">
+            <input maxlength='10' bindinput="inputVal" value="{{inputVal}}" placeholder="请填写您想要创建的项目（不超过10字）"></input>
+        </view>
+        <view class="myModal-foot flex-average">
+            <button class="cancel" bindtap="myModalCancel">取消</button>
+            <button bindtap="addClassify">确定</button>
+        </view>
+    </view>
+</view>

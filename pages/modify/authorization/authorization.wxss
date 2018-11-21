@@ -1,0 +1,42 @@
+/* pages/modify/authorization/authorization.wxss */
+
+.page {
+    background: #fff;
+}
+
+.page-head {
+    text-align: center;
+    border-bottom: 2rpx solid rgba(0, 0, 0, 0.1);
+    margin: auto 64rpx;
+}
+
+.page-head image {
+    background: #3670fb;
+    border-radius: 24rpx;
+    width: 128rpx;
+    height: 128rpx;
+    margin: 80rpx auto 0;
+}
+
+.page-head view {
+    margin-top: 16rpx;
+    margin-bottom: 60rpx;
+}
+
+.page-center {
+    padding: 62rpx;
+}
+
+.page-center view:last-child {
+    margin-top: 18rpx;
+    color: rgba(0, 0, 0, 0.4);
+    text-indent: 2em;
+}
+
+.btn {
+    background: #1aad19;
+    margin: 0 70rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 32rpx;
+}

@@ -1,0 +1,185 @@
+<!--pages/merchantRegister/merchantRegisterHome/merchantRegisterHome.wxml-->
+<view class="page">
+    <view class="menu">
+        <!-- <view class="menu-list flex-average hr" bindtap="merchantLogo"> -->
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>logo</text>
+            </view>
+            <view class="my-menu-right flex">
+                <image src="{{merchantInfo.logo ? merchantInfo.logo:'/images/logo.png'}}" catchtap="chooseimage"></image>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <!-- <view class="menu-list flex-average hr" bindtap="merchantTitle"> -->
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>名字</text>
+            </view>
+            <view class="menu-right" bindtap="merchantTitle">
+                <text>{{merchantInfo.shopName}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <!-- <view class="menu-list flex-average hr" bindtap="merchantAddress"> -->
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>地址</text>
+            </view>
+            <view class="menu-right" bindtap="merchantAddress">
+                <text>{{merchantInfo.address}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <!-- <view class="menu-list flex-average hr" bindtap="merchantPhoneNumber"> -->
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>联系电话</text>
+            </view>
+            <view class="menu-right" bindtap="merchantPhoneNumber">
+                <text>{{merchantInfo.phone}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <!-- <view class="menu-list flex-average hr" bindtap="merchantTime"> -->
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>营业时间</text>
+            </view>
+            <view class="flex menu-right">
+                <view>
+                    <picker mode="multiSelector" value="{{selectTimeShow}}" bindchange="bindMultiPickerChange" range="{{selectTime}}">
+                        <view>
+                            <block wx:if="{{merchantInfo.startTime != '选择营业时间'}}">
+                                {{merchantInfo.startTime}}至 {{merchantInfo.endTime}}
+                            </block>
+                            <block wx:else>
+                                {{merchantInfo.startTime}}
+                            </block>
+                        </view>
+                    </picker>
+                </view>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <!-- <view class="menu-list flex-average hr" bindtap="merchantEmail"> -->
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>邮箱</text>
+            </view>
+            <view class="menu-right" bindtap="merchantEmail">
+                <text>{{merchantInfo.email}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <!-- <view class="menu-list flex-average hr" bindtap="merchantLabel"> -->
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>标签</text>
+            </view>
+            <view class="menu-right" bindtap="merchantLabel">
+                <block wx:if="{{merchantInfo.labelList == '选择标签'}}">
+                    <text>{{merchantInfo.labelList}}</text>
+                </block>
+                <block wx:else>
+                    <block wx:for="{{merchantInfo.labelList}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                        {{item.name}}
+                        <block wx:if="{{merchantInfo.labelList.length-1 != index}}">、</block>
+                    </block>
+                </block>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <!-- <view class="menu-list flex-average hr" bindtap="merchantName"> -->
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>联系人</text>
+            </view>
+            <view class="menu-right" bindtap="merchantName">
+                <text>{{merchantInfo.linkman}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <!-- <view class="menu-list flex-average" bindtap="merchantIntro"> -->
+        <view class="menu-list flex-average {{merchantInfo.shopInfo == null?'hr':''}}">
+            <view class="menu-left">
+                <text>商家简介</text>
+            </view>
+            <view class="menu-right" bindtap="merchantIntro">
+                <block wx:if="{{merchantInfo.shopInfo == null}}">
+                    <text>填写简介</text>
+                </block>
+                <block wx:else>
+                    <text>编辑</text>
+                </block>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <block wx:if="{{merchantInfo.shopInfo != null}}">
+            <view class="hr">{{merchantInfo.shopInfo}}</view>
+        </block>
+        <!-- <view class="menu-list flex-average" bindtap="merchantMeal"> -->
+        <view class="menu-list flex-average {{merchantInfo.shopMealList == null?'hr':''}}">
+            <view class="menu-left">
+                <text>商家套餐</text>
+            </view>
+            <view class="menu-right" bindtap="merchantMeal">
+                <block wx:if="{{merchantInfo.shopMealList == null}}">
+                    <text>填写套餐</text>
+                </block>
+                <block wx:else>
+                    <text>编辑</text>
+                </block>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <block wx:if="{{merchantInfo.shopMealList != null}}">
+            <view class="hr menux">
+                <block wx:for="{{merchantInfo.shopMealList}}" wx:for-item="item" wx:key="**this">
+                    <view class="flex-average menu-list">
+                        <view class="menu-left">{{item.mealName}}</view>
+                        <view class="flex-average menu-right">
+                            <text>￥{{item.price}}/人</text>
+                            <text>({{item.maxNum}})人</text>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </block>
+        <!-- <view class="menu-list flex-average hr" bindtap="merchantMoneyStyle"> -->
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>收款方式</text>
+            </view>
+            <view class="menu-right" bindtap="merchantMoneyStyle">
+                <text>{{merchantInfo.collectMode}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="menu {{merchantInfo.imageUrls == '添加照片（选填）'?'menui':''}}">
+        <!-- <view class="menu-list flex-average" bindtap="merchantImgs"> -->
+        <view class="menu-list flex-average">
+            <view class="menu-left">
+                <text>商家照片</text>
+            </view>
+            <view class="menu-right" bindtap="merchantImgs">
+                <block wx:if="{{merchantInfo.imageUrls == '添加照片（选填）'}}">
+                    <text>{{merchantInfo.imageUrls}}</text>
+                </block>
+                <block wx:else>
+                    <text>编辑</text>
+                </block>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <block wx:if="{{merchantInfo.imageUrls != '添加照片（选填）'}}">
+            <scroll-view hidden="{{merchantInfo.imageUrls?false:true}}" class="flex img-list" scroll-x="true">
+                <block wx:for="{{merchantInfo.imageUrls}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                    <image src="{{item}}" data-index="{{index}}" bindtap="previewImg"></image>
+                </block>
+            </scroll-view>
+        </block>
+    </view>
+    <button class="btn" bindtap="merchantRegister">确定</button>
+</view>

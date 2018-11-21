@@ -1,0 +1,20 @@
+/* pages/msgCenter/msgCenter.wxss */
+
+.page-menu-list {
+    background: #fff;
+    padding: 24rpx 32rpx;
+    line-height: 80rpx;
+}
+
+.page-menu-left image {
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 20rpx;
+}
+
+.page-menu-right icon {
+    width: 16rpx;
+    height: 16rpx;
+    background: #f00;
+    border-radius: 50%;
+}

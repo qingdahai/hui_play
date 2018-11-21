@@ -1,0 +1,85 @@
+<!--pages/personalData/personalData.wxml-->
+<view class="page">
+    <view class="menu">
+        <view class="menu-list flex-average hr head">
+            <view class="menu-left">
+                <text>头像</text>
+            </view>
+            <view class="flex head-menu-right">
+                <block wx:if="{{userInfo.headUrl}}">
+                    <image src="{{userInfo.headUrl}}" catchtap="chooseimage" class="img"></image>
+                </block>
+                <block wx:else>
+                    <image src="/images/logo.png" catchtap="chooseimage" class="img"></image>
+                </block>
+                <view class="menu-right page-menu-right">
+                    <image src="/images/drop_right.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="menu">
+        <view class="menu-list flex-average hr" bindtap="modifyID">
+            <view class="menu-left">
+                <text>ID</text>
+            </view>
+            <view class="menu-right">
+                <text>{{userInfo.nickname}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="modifyGender">
+            <view class="menu-left">
+                <text>性别</text>
+            </view>
+            <view class="menu-right">
+                <text>{{userInfo.sex==1?'男':'女'}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="modifyAge">
+            <view class="menu-left">
+                <text>年龄</text>
+            </view>
+            <view class="menu-right">
+                <text>{{userInfo.age}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average" bindtap="modifyAge">
+            <view class="menu-left">
+                <text>组局号</text>
+            </view>
+            <view class="menu-right">
+                <text>{{userInfo.groupId}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="menu">
+        <view class="menu-list flex-average hr" bindtap="modifyPhoneNumber">
+            <view class="menu-left">
+                <text>手机号</text>
+            </view>
+            <view class="menu-right">
+                <text>{{userInfo.phone}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average" bindtap="authorization">
+            <view class="menu-left">
+                <text>绑定微信</text>
+            </view>
+            <view class="menu-right">
+                <block wx:if="{{userInfo.openId}}">
+                    <text>已授权</text>
+                </block>
+                <block wx:else>
+                    <text>未授权</text>
+                </block>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

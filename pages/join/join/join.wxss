@@ -1,0 +1,36 @@
+/* pages/join/join.wxss */
+
+.page {
+    background: #fff;
+}
+
+.h-text {
+    padding: 40rpx 32rpx;
+    font-size: 36rpx;
+}
+
+/**/
+
+.flex-average {
+    flex-wrap: wrap;
+    padding: 0 32rpx;
+}
+
+.posi {
+    position: relative;
+    margin-bottom: 20rpx;
+}
+
+.posi text {
+    position: absolute;
+    z-index: 99;
+    left: 20rpx;
+    top: 10rpx;
+    padding: 20rpx;
+    color: #fff;
+}
+
+.posi image {
+    width: 300rpx;
+    height: 160rpx;
+}

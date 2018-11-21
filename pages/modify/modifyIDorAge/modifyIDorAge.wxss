@@ -1,0 +1,30 @@
+/* pages/modifyID/modifyID.wxss */
+
+view {
+    height: 96rpx;
+    line-height: 96rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+input {
+    margin-top: 20rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    width: 640rpx;
+    margin-left: 32rpx;
+}
+
+image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 28rpx;
+    margin-right: 32rpx;
+}
+
+button {
+    color: #fff;
+    background: #3670fb;
+    border-radius: 4px;
+    margin: 340rpx 58rpx;
+}

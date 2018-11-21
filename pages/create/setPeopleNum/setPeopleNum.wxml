@@ -1,0 +1,26 @@
+<!--pages/create/setPeopleNum/setPeopleNum.wxml-->
+<view class="page">
+    <view class="menu">
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>成局人数</text>
+            </view>
+            <view class="menu-center flex">
+                <input value="{{minNum}}" bindinput="minNum"></input><text>人</text>
+            </view>
+            <view class="menu-right">
+            </view>
+        </view>
+        <view class="menu-list flex-average">
+            <view class="menu-left">
+                <text>最多人数</text>
+            </view>
+            <view class="menu-center flex">
+                <input value="{{maxNum}}" bindinput="maxNum"></input><text>人</text>
+            </view>
+            <view class="menu-right">
+            </view>
+        </view>
+    </view>
+    <button class="btn" bindtap="query_ok">确定</button>
+</view>

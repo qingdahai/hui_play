@@ -1,0 +1,110 @@
+{
+    "pages": [
+        "pages/login/login/login",
+        "pages/login/wxLogin/wxLogin",
+        "pages/inning/inningOver/inningOver",
+        "pages/inning/inningMsg/inningMsg",
+        "pages/inning/inningHistory/inningHistory",
+        "pages/inning/inningUnderway/inningUnderway",
+        "pages/inning/inningMealList/inningMealList",
+        "pages/inning/inningExit/inningExit",
+        "pages/inning/pay/pay",
+        "pages/merchant/merchantHome/merchantHome",
+        "pages/merchant/merchantData/merchantData",
+        "pages/merchant/merchantRegister/merchantRegister",
+        "pages/merchant/merchantSettings/merchantSettings",
+        "pages/merchant/merchantMoney/merchantMoney",
+        "pages/merchant/merchantSetMeal/merchantSetMeal",
+        "pages/merchant/merchantSetMealList/merchantSetMealList",
+        "pages/merchant/merchantSetMealAdd/merchantSetMealAdd",
+        "pages/merchant/merchantAlbum/merchantAlbum",
+        "pages/merchant/merchantDataModify/modifyIntro/modifyIntro",
+        "pages/merchant/merchantDataModify/modifyLabel/modifyLabel",
+        "pages/merchant/merchantDataModify/modifyOne/modifyOne",
+        "pages/merchant/merchantDataModify/modifyLogo/modifyLogo",
+        "pages/merchant/merchantDataModify/modifyAddress/modifyAddress",
+        "pages/merchant/merchantMealMsg/merchantMealMsg",
+        "pages/home/home/home",
+        "pages/home/myInnings/myInnings",
+        "pages/home/personalData/personalData",
+        "pages/home/integral/integral",
+        "pages/home/integralShow/integralShow",
+        "pages/home/album/album",
+        "pages/home/myLove/myLove",
+        "pages/home/share/share",
+        "pages/home/about/about",
+        "pages/home/usage/usage",
+        "pages/home/settings/settings",
+        "pages/home/appeal/appeal",
+        "pages/index/index/index",
+        "pages/index/indexPulldown/indexPulldown",
+        "pages/register/register",
+        "pages/modify/authorization/authorization",
+        "pages/modify/modifyIDorAge/modifyIDorAge",
+        "pages/modify/modifyGender/modifyGender",
+        "pages/modify/modifyPhoneNumber/modifyPhoneNumber",
+        "pages/modify/modifyPassword/modifyPassword",
+        "pages/modify/modifyUserHead/modifyUserHead",
+        "pages/modify/forgetPassword/forgetPassword",
+        "pages/create/createSuccess/createSuccess",
+        "pages/create/goCreate/goCreate",
+        "pages/create/setAddress/setAddress",
+        "pages/create/setPeopleNum/setPeopleNum",
+        "pages/create/create/create",
+        "pages/create/selectClassify/selectClassify",
+        "pages/create/selectMerchant/selectMerchant",
+        "pages/create/selectMerchantMsg/selectMerchantMsg",
+        "pages/friends/friends/friends",
+        "pages/friends/friendMsg/friendMsg",
+        "pages/search/selectMapAddress/selectMapAddress",
+        "pages/search/searchFriend/searchFriend",
+        "pages/search/searchInnings/searchInnings",
+        "pages/search/searchInningsResult/searchInningsResult",
+        "pages/search/selectCity/selectCity",
+        "pages/join/join/join",
+        "pages/join/joinShow/joinShow",
+        "pages/msgCenter/newFriend/newFriend",
+        "pages/msgCenter/menu/msg",
+        "pages/msgCenter/systemMsgDetail/systemMsgDetail",
+        "pages/msgCenter/systemMsg/systemMsg",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "HUI玩"
+    },
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "rgb(255, 152, 0)",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index/index",
+                "iconPath": "/images/index.png",
+                "selectedIconPath": "/images/index_h.png"
+            },
+            {
+                "pagePath": "pages/join/join/join",
+                "iconPath": "/images/join.png",
+                "selectedIconPath": "/images/join_h.png"
+            },
+            {
+                "pagePath": "pages/create/create/create",
+                "iconPath": "/images/create.png",
+                "selectedIconPath": "/images/create.png"
+            },
+            {
+                "pagePath": "pages/friends/friends/friends",
+                "iconPath": "/images/friends.png",
+                "selectedIconPath": "/images/friends_h.png"
+            },
+            {
+                "pagePath": "pages/home/home/home",
+                "iconPath": "/images/home.png",
+                "selectedIconPath": "/images/home_h.png"
+            }
+        ]
+    }
+}

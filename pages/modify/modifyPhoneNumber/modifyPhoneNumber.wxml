@@ -1,0 +1,19 @@
+<!--pages/modify/modifyPhoneNumber/modifyPhoneNumber.wxml-->
+<view class="page">
+    <view data-gender="男" bindtap="select" class="list0">
+        <view class="hr flex-average">
+            <view class="flex">
+                <image src="/images/phone_number.png" class="phone-img"></image>
+                <input placeholder="请输入手机号" maxlength="11" type="number" bindinput="phoneNumberVal"></input>
+            </view>
+            <view class="getPhoneVerifyCodeBtn">获取验证码</view>
+        </view>
+    </view>
+    <view data-gender="女" bindtap="select" class="flex-average list1">
+        <view class="flex">
+            <image src="/images/message_number.png" class="message-img"></image>
+            <input placeholder="请输入验证码" type="number" bindinput="verifyCodeVal"></input>
+        </view>
+    </view>
+    <button bindtap="modify" data-verifyCode="{{verifyCode}}" data-phoneNumber="{{phoneNumber}}">确定</button>
+</view>

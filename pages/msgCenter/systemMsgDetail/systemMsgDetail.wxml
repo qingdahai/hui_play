@@ -1,0 +1,11 @@
+<!--pages/msgCenter/systemMsgDetail/systemMsgDetail.wxml-->
+<view class="page">
+    <view class="page-cont">
+        <view>您的好友拉塞尔正在参加桌游局-一起来玩狼人杀
+        </view>
+        <view class="flex-average">
+            <view>07-23-2018</view>
+            <view>跟随参加</view>
+        </view>
+    </view>
+</view>

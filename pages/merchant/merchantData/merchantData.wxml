@@ -1,0 +1,109 @@
+<!--pages/merchant/merchantData/merchantData.wxml-->
+<view class="page">
+    <view class="menu">
+        <view class="menu-list flex-average hr head" catchtap="chooseimage">
+            <view class="menu-left">
+                <text>logo</text>
+            </view>
+            <view class="my-menu-right">
+                <image src="{{merchantInfo.logo}}"></image>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="merchantTitle">
+            <view class="menu-left">
+                <text>名字</text>
+            </view>
+            <view class="menu-right">
+                <text>{{merchantInfo.shopName}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="merchantAddress">
+            <view class="menu-left">
+                <text>地址</text>
+            </view>
+            <view class="menu-right">
+                <text>{{merchantInfo.address}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="merchantPhoneNumber">
+            <view class="menu-left">
+                <text>联系电话</text>
+            </view>
+            <view class="menu-right">
+                <text>{{merchantInfo.phone}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="merchantTime">
+            <view class="menu-left">
+                <text>营业时间</text>
+            </view>
+            <view class="menu-right">
+                <view>
+                    <picker mode="multiSelector" value="{{selectTimeShow}}" bindchange="bindMultiPickerChange" range="{{selectTime}}" class="flex-picker">
+                        <view>
+                            {{merchantInfo.startTime}}至{{merchantInfo.endTime}}
+                        </view>
+                        <!-- <picker-view-column>
+                            <view wx:for="{{selectTime}}" style="line-height: 50px">{{startTime}}时</view>
+                        </picker-view-column> -->
+                        <image src="/images/drop_right.png"></image>
+                    </picker>
+                </view>
+                <!-- <image src="/images/drop_right.png"></image> -->
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="merchantEmail">
+            <view class="menu-left">
+                <text>邮箱</text>
+            </view>
+            <view class="menu-right">
+                <text>{{merchantInfo.email}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="merchantLabel">
+            <view class="menu-left">
+                <text>标签</text>
+            </view>
+            <view class="menu-right">
+                <block wx:for="{{merchantLabelArrShow}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                    {{item.name}}
+                    <block wx:if="{{merchantLabelArrShow.length-1 != index}}">、</block>
+                </block>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="merchantName">
+            <view class="menu-left">
+                <text>联系人</text>
+            </view>
+            <view class="menu-right">
+                <text>{{merchantInfo.linkman}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average" bindtap="merchantIntro">
+            <view class="menu-left">
+                <text>商家简介</text>
+            </view>
+            <view class="menu-right">
+                <text class="textx">编辑</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="hr">{{merchantInfo.shopInfo}}</view>
+        <view class="menu-list flex-average" bindtap="merchantMoney">
+            <view class="menu-left">
+                <text>收款方式</text>
+            </view>
+            <view class="menu-right">
+                <text>{{merchantInfo.collectMode == 2 ? '微信支付':''}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

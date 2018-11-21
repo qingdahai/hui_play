@@ -1,0 +1,50 @@
+<!--pages/merchant/merchantHome/merchantHome.wxml-->
+<view class="page">
+    <view class="menu">
+        <view class="menu-list flex-average hr head" bindtap="merchantData">
+            <view class="my-menu-left">
+                <image src="{{merchantInfo.logo}}"></image>
+                <text>{{merchantInfo.shopName}}</text>
+            </view>
+            <view class="menu-right">
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="merchantSetMeal">
+            <view class="menu-left">
+                <text>套餐管理</text>
+            </view>
+            <view class="menu-right">
+                <text></text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="merchantAlbum">
+            <view class="menu-left">
+                <text>相册管理</text>
+            </view>
+            <view class="menu-right">
+                <text></text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr" bindtap="merchantMoney">
+            <view class="menu-left">
+                <text>收入明细</text>
+            </view>
+            <view class="menu-right">
+                <text></text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average" bindtap="merchantSettings">
+            <view class="menu-left">
+                <text>设置</text>
+            </view>
+            <view class="menu-right">
+                <text></text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

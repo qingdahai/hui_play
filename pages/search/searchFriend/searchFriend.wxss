@@ -1,0 +1,21 @@
+/* pages/searchFriend/searchFriend.wxss */
+
+/**/
+
+.inputSearch {
+    padding: 28rpx 32rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.inputSearch text:last-child {
+    color: #5e8dfc;
+}
+
+.search-left, .search-left view {
+    width: 100%;
+}
+
+.search-left input {
+    width: 98%;
+}

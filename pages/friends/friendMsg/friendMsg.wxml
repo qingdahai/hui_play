@@ -1,0 +1,66 @@
+<!--pages/friendMessage/friendMessage.wxml-->
+<view class="page">
+    <view class="flex page-head">
+        <block wx:if="{{friendMsg.headUrl}}">
+            <image src="{{friendMsg.headUrl}}"></image>
+        </block>
+        <block wx:else>
+            <image src="/images/logo.png"></image>
+        </block>
+        <view>
+            <view class="flex">
+                <text>{{friendMsg.nickname}}</text>
+                <block wx:if="{{friendMsg.sex==1}}">
+                    <image src="/images/boy.png"></image>
+                </block>
+                <block wx:else>
+                    <!-- <image src="/images/girl.png"></image> -->
+                </block>
+            </view>
+            <view>
+                <text>玩伴数：{{friendMsg.friendNum}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="menu">
+        <view class='flex-average menu-list hr'>
+            <view class='menu-left'>性别</view>
+            <view class='menu-right'>
+                <block wx:if="{{friendMsg.sex==1}}">
+                    男
+                </block>
+                <block wx:else>
+                    女
+                </block>
+            </view>
+        </view>
+        <view class='flex-average menu-list hr'>
+            <view class='menu-left'>年龄</view>
+            <view class='menu-right'>{{friendMsg.age}}</view>
+        </view>
+        <view class='flex-average menu-list' hidden="{{showFriendNum}}">
+            <view class='menu-left'>组局号</view>
+            <view class='menu-right'>{{friendMsg.groupId}}</view>
+        </view>
+    </view>
+    <view hidden="{{showFriendCare}}" class="album" wx:if="{{friendMsg.userPhotoList.length != 0}}">
+        <view>相册</view>
+        <scroll-view class="albumList" scroll-x="true">
+            <block wx:for="{{friendMsg.userPhotoList}}" wx:for-item="item"  wx:key="**this">
+                <image bindtap="previewImg" data-id="{{item.id}}" src="{{item.imageUrl}}"></image>
+            </block>
+        </scroll-view>
+    </view>
+    <button class="{{showFriendCareBtn}} {{showFriendNumBtn}}" bindtap="careFriend">{{btnVal}}</button>
+</view>
+<view class="myModal" hidden="{{showMyModal}}">
+    <view class="myModal-body">
+        <view class="myModal-cont">
+            <image src="/images/successful.png"></image>
+            <view>{{myModalText}}</view>
+        </view>
+        <view class="myModal-foot">
+            <button bindtap="myModalClick">确定</button>
+        </view>
+    </view>
+</view>

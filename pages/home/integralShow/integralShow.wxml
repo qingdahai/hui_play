@@ -1,0 +1,27 @@
+<!--pages/integral/integralincome/integralincome.wxml-->
+
+<view class="page">
+    <view class="box" hidden="{{gameIntegralShow ? true : false}}">
+        <view wx:for="{{gameIntegral}}" wx:for-item="item" wx:key="**this" class="page-list {{item.hr}}">
+            <view class="flex-average">
+                <text>{{item.type==1?'入局':'退局'}}</text>
+                <text class="{{item.class}}">{{item.money}}组局分</text>
+            </view>
+            <view>
+                {{item.showCreateTime}}
+            </view>
+        </view>
+    </view>
+
+    <view class="box" hidden="{{integralShow ? true : false}}">
+        <view wx:for="{{integral}}" wx:for-item="item" wx:key="**this" class="page-list {{item.hr}}">
+            <view class="flex-average">
+                <text>{{item.type==1?'入局':'退局'}}</text>
+                <text class="{{item.class}}">{{item.money}}积分</text>
+            </view>
+            <view>
+                {{item.showCreateTime}}
+            </view>
+        </view>
+    </view>
+</view>

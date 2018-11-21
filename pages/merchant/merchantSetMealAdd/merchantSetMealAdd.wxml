@@ -1,0 +1,52 @@
+<!--pages/merchant/merchantSetMealAdd/merchantSetMealAdd.wxml-->
+<view class="page">
+
+    <view class="menu">
+        <view hidden="{{isMerchant}}" class="flex-average menu-list hr" bindtap="selectLabel">
+            <view class="menu-left">选择标签</view>
+            <input class="menu-center" placeholder="{{mealLabel}}" disabled></input>
+            <view></view>
+        </view>
+        <view class="flex-average menu-list hr">
+            <view class="menu-left">套餐名称</view>
+            <input class="menu-center" bindinput="mealName" placeholder="填写套餐名称"></input>
+            <view></view>
+        </view>
+        <view class="flex-average menu-list hr">
+            <view class="menu-left">套餐价格</view>
+            <input class="menu-center" bindinput="mealPrice" placeholder="填写套餐价格"></input>
+            <view class="menu-right">
+                <text>元/人</text>
+            </view>
+        </view>
+        <view class="flex-average menu-list">
+            <view class="menu-left">单日最多用户</view>
+            <input class="menu-center" bindinput="mealMaxPer" placeholder="填写用户人数"></input>
+            <view class="menu-right">
+                <text>人</text>
+            </view>
+        </view>
+    </view>
+    <button class="button" bindtap="addMeal">确定</button>
+</view>
+<view class="myModal" hidden="{{showModal}}">
+    <view class="myModal-body">
+        <view class="myModal-head">提示</view>
+        <view class="myModal-cont">
+            <view>
+                <block wx:for="{{labelList}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                    <view class="flex itemType">
+                        <view data-id="{{item.id}}" class="{{item.id==selectID?'active':''}}" bindtap="selectItem">
+                            <image wx:if="{{item.id==selectID}}" src="/images/right_blue.png"></image>
+                        </view>
+                        <text>{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="flex-average myModal-foot">
+            <button bindtap="query_cancel">取消</button>
+            <button bindtap="query_ok">确定</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+/* pages/personalData/personalData.wxss */
+
+.menu {
+    margin-bottom: 0;
+}
+
+.head {
+    height: 116rpx !important;
+    line-height: 116rpx !important;
+}
+
+.img {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+    margin-top: 15rpx;
+}
+
+.page-menu-right {
+    margin-top: 30rpx;
+    margin-left: 41rpx;
+}
+
+text {
+    max-width: 500rpx;
+}

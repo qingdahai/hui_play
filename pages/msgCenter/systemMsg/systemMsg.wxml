@@ -1,0 +1,16 @@
+<!--pages/msgCenter/systemMsg/systemMsg.wxml-->
+<view class="page">
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchend="touchsend" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="**this" bindtap="informSystemMessage">
+        <view class="content">
+            <view class="flex-average">
+                <view>{{item.typename}}</view>
+                <view>{{item.time}}</view>
+            </view>
+            <view class="flex-average">
+                <view>{{item.content}}</view>
+                <view></view>
+            </view>
+        </view>
+        <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+    </view>
+</view>

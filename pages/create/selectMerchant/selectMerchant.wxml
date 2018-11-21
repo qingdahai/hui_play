@@ -1,0 +1,19 @@
+<!--pages/create/selectMerchant/selectMerchant.wxml-->
+<view class="page">
+    <view class="menu">
+        <block wx:for="{{shopList}}" wx:key="**this" wx:for-item="item">
+            <view class="flex hr" data-shopId="{{item.shopId}}" data-distance="{{item.distance}}" bindtap="selectMerchantMsg">
+                <image src="{{item.logo}}"></image>
+                <view>
+                    <view>{{item.shopName}}</view>
+                    <view>{{createInningsData.labelName}}
+                        <image src="/images/vip.png"></image>认证商家</view>
+                    <view>
+                        <image src="/images/position_gay.png"></image>{{item.address}}<block wx:if="{{item.distance}}">（{{item.distance}}KM）</block>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <button class="btn" bindtap="inputAddress">手动输入</button>
+</view>

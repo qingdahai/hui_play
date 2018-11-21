@@ -1,0 +1,21 @@
+<!--pages/msgCenter/msgCenter.wxml-->
+<view class="page">
+    <view class="flex-average page-menu-list hr" bindtap="newFriend">
+        <view class="flex page-menu-left">
+            <image src="/images/Fri_add.png"></image>
+            <view>添加好友</view>
+        </view>
+        <view class="page-menu-right">
+            <icon></icon>
+        </view>
+    </view>
+    <view class="flex-average page-menu-list" bindtap="systemMsg">
+        <view class="flex page-menu-left">
+            <image src="/images/notice.png"></image>
+            <view>系统通知</view>
+        </view>
+        <view class="page-menu-right">
+            <icon></icon>
+        </view>
+    </view>
+</view>

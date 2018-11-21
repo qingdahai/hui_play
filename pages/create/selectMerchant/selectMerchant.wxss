@@ -1,0 +1,40 @@
+/* pages/create/selectMerchant/selectMerchant.wxss */
+
+.flex {
+    background: #fff;
+    margin: 20rpx 0;
+    padding: 20rpx 0;
+}
+
+.flex>image {
+    justify-content: center;
+    align-items: center;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.flex>view {
+    max-width: 540rpx;
+}
+
+.flex>view>view:nth-child(2) {
+    margin: 6rpx 0;
+}
+
+.flex>view>view:nth-child(2) image {
+    width: 28rpx;
+    height: 28rpx;
+    margin: 0 10rpx 0 45.6rpx;
+}
+
+.flex>view>view:nth-child(3) image {
+    width: 18rpx;
+    height: 20rpx;
+    margin-right: 10rpx;
+}
+
+.btn {
+    margin: 88rpx 60rpx;
+}

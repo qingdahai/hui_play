@@ -1,0 +1,19 @@
+/* pages/merchant/merchantHome/merchantHome.wxss */
+
+.head {
+    height: 134rpx !important;
+    line-height: 134rpx !important;
+}
+
+.my-menu-left image {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+    float: left;
+    margin-top: 24rpx;
+    margin-right: 20rpx;
+}
+
+.head .menu-right image {
+    margin-top: 60rpx !important;
+}

@@ -1,0 +1,119 @@
+/* pages/myInningsDetails/pay/pay.wxss */
+
+.menux {
+    padding: 0 32rpx;
+}
+
+.nav {
+    height: 96rpx;
+    line-height: 96rpx;
+    margin-top: 20rpx;
+}
+
+.nav view.flex {
+    align-items: center;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.nav image {
+    width: 18rpx;
+    height: 28rpx;
+    margin-left: 21rpx;
+}
+
+.meal>view {
+    height: 68rpx;
+    line-height: 68rpx;
+}
+
+.meal>view>view:last-child {
+    color: #ff3737;
+}
+
+.paySelect>view:first-child {
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 36rpx;
+}
+
+.paySelect>view.flex-average {
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 30rpx 0%;
+}
+
+.paySelect>view.flex-average .flex image {
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 20rpx;
+}
+
+.radio {
+    border-color: #3670fb;
+}
+
+.radio image {
+    position: relative;
+    top: -4rpx;
+}
+
+.btn {
+    margin: 194rpx 56rpx 26rpx;
+}
+
+.red {
+    color: #ff3737;
+}
+
+/* */
+
+.integral {
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.integral .head {
+    margin: 24rpx 28rpx;
+}
+
+.integral .head view:first-child {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.integral .head view:last-child {
+    color: #3670fb;
+}
+
+.integral .cont {
+    margin: 48rpx 28rpx;
+}
+
+.integral .cont input {
+    width: 120rpx;
+    background: #f1f1f1;
+    text-align: center;
+}
+
+.integral .cont .flex view {
+    width: 56rpx;
+    text-align: center;
+}
+
+.myModal-cont {
+    margin: 80rpx auto;
+    text-align: center;
+}
+
+.myModal-cont image {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.myModal-foot button {
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0 40rpx 40rpx;
+}

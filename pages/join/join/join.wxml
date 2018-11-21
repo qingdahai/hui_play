@@ -1,0 +1,12 @@
+<!--pages/join/join.wxml-->
+<view class="page">
+    <view class="h-text">选择入局</view>
+    <view class="flex-average">
+        <block wx:for="{{labelTag}}" wx:for-item="item" wx:key="*this">
+            <view class="posi" bindtap="inning" data-id="{{item.id}}" data-labelName="{{item.name}}">
+                <image src="/images/{{item.src}}.png"></image>
+                <text>{{item.name}}</text>
+            </view>
+        </block>
+    </view>
+</view>

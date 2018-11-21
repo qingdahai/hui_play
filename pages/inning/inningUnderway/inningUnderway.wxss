@@ -1,0 +1,140 @@
+/* pages/myInningsDetails/underway/underway.wxss */
+
+.tips {
+    height: 64rpx;
+    line-height: 64rpx;
+    background: #e3ebff;
+    color: rgba(54, 112, 251, 0.8);
+    padding: 0 32rpx;
+}
+
+.inningsList {
+    height: 100rpx;
+    background: #fff;
+    padding: 20rpx 32rpx;
+}
+
+.creater {
+    margin-right: 64rpx;
+    position: relative;
+}
+
+.creater image {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+
+.creater text {
+    position: absolute;
+    background: #3670fb;
+    color: #fff;
+    text-align: center;
+    border: 2rpx solid #fff;
+    border-radius: 200rpx;
+    width: 76rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    right: -36rpx;
+    bottom: 0;
+}
+
+.otherList>view {
+    margin-right: 64rpx;
+    position: relative;
+}
+
+.otherList>view>image {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+
+.otherList>view>view {
+    position: absolute;
+    right: -10rpx;
+    bottom: 0;
+    background: #fff;
+}
+
+/* .otherList text {
+    position: absolute;
+    background: #fff;
+    text-align: center;
+    border: 2rpx solid #3670fb;
+    border-radius: 200rpx;
+    width: 32rpx;
+    height: 32rpx;
+    right: -10rpx;
+    bottom: 0;
+}
+
+.otherList text.active {
+    background: #3670fb;
+}
+
+.otherList text.active:after {
+    content: "√";
+    color: #fff;
+} */
+
+.list {
+    padding: 0 32rpx;
+    background: #fff;
+    height: 96rpx;
+    line-height: 96rpx;
+    margin-bottom: 1px;
+}
+
+.flex-average {
+    border-bottom: 2rpx solid rgba(0, 0, 0, 0.06);
+}
+.list .flex-average view image{
+    width: 18rpx;
+    height: 28rpx;
+}
+.text {
+    background: #fff;
+    padding: 20rpx 32rpx;
+}
+
+.text text {
+    display: block;
+}
+
+.text text:last-child {
+    line-height: 44rpx;
+    color: rgba(0, 0, 0, 0.4);
+    margin-top: 18rpx;
+}
+
+.buttons {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.buttons view {
+    width: 50%;
+    text-align: center;
+    background: #fff;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 32rpx;
+}
+
+.buttons view:first-child {
+    color: rgba(255, 55, 55, 1);
+}
+
+.buttons view:last-child {
+    background: rgba(54, 112, 251, 1);
+    color: #fff;
+}
+
+/* 签到后*/
+
+.signInInning {
+    background: #ececec !important;
+    color: #aeaeae !important;
+}

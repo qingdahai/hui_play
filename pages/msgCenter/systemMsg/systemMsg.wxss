@@ -1,0 +1,56 @@
+/* pages/msgCenter/systemMsg/systemMsg.wxss */
+
+.touch-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #f0f0f0;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+
+.content {
+    width: 91.4%;
+    padding: 20rpx 4.3%;
+    line-height: 44rpx;
+    margin-right: 0;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transform: translateX(180rpx);
+    transform: translateX(180rpx);
+    margin-left: -180rpx;
+}
+
+.content>view:first-child view:last-child {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.content>view:last-child {
+    margin-top: 20rpx;
+}
+
+.content>view:last-child view:last-child {
+    width: 16rpx;
+    height: 16rpx;
+    background: #f00;
+    border-radius: 50%;
+}
+
+.del {
+    background-color: orangered;
+    width: 160rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-transform: translateX(180rpx);
+    transform: translateX(180rpx);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.touch-move-active .content, .touch-move-active .del {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}

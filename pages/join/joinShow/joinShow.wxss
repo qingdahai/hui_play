@@ -1,0 +1,34 @@
+/* pages/joinShow/joinShow.wxss */
+
+.tab-h {
+    height: 88rpx;
+    line-height: 88rpx;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #fff;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.tab-item {
+    margin: 0 40rpx;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.tab-item.active {
+    color: #3670fb;
+    position: relative;
+}
+
+.tab-content {
+    margin-top: 88rpx;
+}
+
+.scoll-h {
+    height: 100%;
+}

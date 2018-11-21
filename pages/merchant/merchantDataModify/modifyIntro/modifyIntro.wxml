@@ -1,0 +1,9 @@
+<!--pages/merchant/merchantDataModify/modifyIntro/modifyIntro.wxml-->
+<view class="page">
+    <view class="textarea">
+        <textarea bindinput="textareaInput" maxlength='50' value="{{textarea}}" placeholder="填写简介">
+            <view>{{inputNumber}}/50</view>
+        </textarea>
+    </view>
+    <button bindtap="modifyIntro">确定</button>
+</view>

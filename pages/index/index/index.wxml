@@ -1,0 +1,116 @@
+<!--pages/index/index.wxml-->
+<!-- <template data="{{title:'on/stopPullDownRefresh'}}" /> -->
+
+<view class="page">
+    <view class="search">
+        <view class="flex-average">
+            <view class="flex search-left" bindtap="searchInnings">
+                <image class="inputSearchImg" src="/images/search.png"></image>
+                <view>
+                    <input placeholder="您想加入什么局" disabled></input>
+                </view>
+            </view>
+            <view class="flex search-right">
+                <view>|</view>
+                <view class="down-select">
+                    <text bindtap="selectKMShow">{{defaultKm}}</text>
+                    <image class="{{active}}" bindtap="selectKMShow" src='/images/drop_down.png'></image>
+                    <view class="selectItemBox" hidden="{{selectKMShow}}" style="height:{{selectItemBoxHeight}}rpx">
+                        <block wx:for="{{kmData}}" wx:key="**this" wx:for-item="item" wx:for-index="index">
+                            <view data-id='{{index}}' bindtap="selectKM">{{item}}</view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <image class="fast-join" bindtap="fastJoin" src="/images/in.png"></image>
+    <view class="h-text">热门组局</view>
+
+    <block wx:for="{{indexHot}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+        <view class="inning-box" data-id="{{item.id}}" bindtap="inningsMsg">
+            <view class="inning-top">
+                <block wx:if="{{item.labelId == 1}}">
+                    <image class="bg-img" src="/images/lr_bg.png"></image>
+                </block>
+                <block wx:elif="{{item.labelId == 2}}">
+                    <image class="bg-img" src="/images/yd_bg.png"></image>
+                </block>
+                <block wx:elif="{{item.labelId == 3}}">
+                    <image class="bg-img" src="/images/cc_bg.png"></image>
+                </block>
+                <block wx:elif="{{item.labelId == 4}}">
+                    <image class="bg-img" src="/images/bd_bg.png"></image>
+                </block>
+                <block wx:elif="{{item.labelId == 5}}">
+                    <image class="bg-img" src="/images/cg_bg.png"></image>
+                </block>
+                <block wx:elif="{{item.labelId == 6}}">
+                    <image class="bg-img" src="/images/d_bg.png"></image>
+                </block>
+                <block wx:elif="{{item.labelId == 7}}">
+                    <image class="bg-img" src="/images/sg_bg.png"></image>
+                </block>
+                <block wx:else>
+                    <image class="bg-img" src="/images/dy_bg.png"></image>
+                </block>
+                <view class="text-header flex-average">
+                    <view>{{item.labelName}}·{{item.classifyName}}</view>
+                    <view>{{item.nowNum}}/{{item.maxNum}}</view>
+                </view>
+                <view class="text-center">{{item.title}}</view>
+                <view class="text-footer flex">
+                    <image src="/images/time_write.png"></image>
+                    <view>
+                        <block wx:if="{{item.startTime > data_time && item.startTime < data_time + 60 * 60 * 24 * 1000}}">
+                            {{countDownTime[index]}}
+                        </block>
+                        <block wx:else>
+                            {{item.startTime_zh}}
+                        </block>
+                        <!-- <block wx:if="{{item.startTime < data_time}}"></block> -->
+                    </view>
+                </view>
+            </view>
+            <view class="inning-bottom flex-average">
+                <view class="inning-bottom-left flex">
+                    <block wx:if="{{item.gameLogo}}">
+                        <image src="{{item.gameLogo}}"></image>
+                    </block>
+                    <block wx:else>
+                        <image src="/images/logo.png"></image>
+                    </block>
+                    <view>
+                        <view>{{item.gameName}}</view>
+                        <view class="inning-bottom-text">
+                            <image src="/images/position_gay.png"></image>
+                            <text>{{item.address}}({{item.distance}}KM)</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
+<!-- <template /> -->
+<view class="myModal" hidden="{{hideModal}}">
+    <view class="myModal-body">
+        <view class="myModal-head">您想加入什么类型的局？</view>
+        <view class="myModal-cont">
+            <view>
+                <block wx:for="{{labelTag}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                    <view class="flex itemType" wx:if="{{index<labelTag.length-1}}">
+                        <view data-index="{{index}}" class="{{item.isSelected?'active':''}}" bindtap="selectItem">
+                            <image src="{{item.isSelected?'/images/right_blue.png':''}}"></image>
+                        </view>
+                        <text>{{item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="flex-average myModal-foot">
+            <button bindtap="myModalCancel">取消</button>
+            <button bindtap="myModalOk">确定</button>
+        </view>
+    </view>
+</view>

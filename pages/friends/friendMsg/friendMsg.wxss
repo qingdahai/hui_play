@@ -1,0 +1,114 @@
+/* pages/friendMessage/friendMessage.wxss */
+
+.page-head {
+    margin: 20rpx 0;
+    background: #fff;
+    padding: 55rpx 38rpx;
+}
+
+.page-head image {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 20rpx;
+    border-radius: 50%;
+}
+
+.page-head>view>view:first-child {
+    font-weight: bold;
+    margin-top: 24rpx;
+    float: left;
+}
+
+.page-head>view>view:first-child image {
+    width: 22.8rpx;
+    height: 22.8rpx;
+    margin-left: 12rpx;
+    margin-top: 10rpx;
+}
+
+.page-head>view>view:last-child {
+    margin-top: 20rpx;
+}
+
+.menu-left {
+    font-weight: bold;
+}
+
+.menu-right {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.album {
+    background: #fff;
+}
+
+.album>view:first-child {
+    font-size: 36rpx;
+    font-weight: bold;
+    padding: 20rpx 38rpx;
+}
+
+.albumList {
+    display: flex;
+    white-space: nowrap;
+    padding: 20rpx 0;
+    height: 120rpx;
+}
+
+.albumList image:first-child {
+    margin: 0 20rpx;
+}
+
+.albumList image {
+    display: inline-block;
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 20rpx;
+    border-radius: 8rpx;
+}
+
+button {
+    position: absolute;
+    bottom: 25.2%;
+    width: 84.8%;
+    left: 7.7%;
+    background: #fff;
+    color: #f00;
+}
+
+.showFriendCareBtn {
+    bottom: 6.4%;
+}
+
+.showFriendNumBtn {
+    background: #3670fb;
+    color: #fff;
+}
+
+/**/
+
+.myModal-body {
+    height: 464rpx;
+    text-align: center;
+}
+
+.myModal-cont image {
+    width: 80rpx;
+    height: 80rpx;
+    margin-top: 80rpx;
+}
+
+.myModal-cont view {
+    margin-top: 16rpx;
+}
+
+.myModal-foot {
+    margin-top: 80rpx;
+}
+
+.myModal-foot button {
+    position: static;
+    background: #3670fb;
+    border-radius: 4px;
+    color: #fff;
+}

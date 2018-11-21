@@ -1,0 +1,23 @@
+/* pages/share/share.wxss */
+
+page>view:first-child {
+    display: none;
+}
+
+.wxParse-head {
+    display: none;
+}
+
+button {
+    width: 85.3%;
+    margin: 90rpx 0 90rpx 7.5%;
+    background: #3670fb !important;
+}
+
+button view {
+    color: #fff;
+    height: 100rpx;
+    line-height: 100rpx;
+    background: #3670fb;
+    border-radius: 4px;
+}

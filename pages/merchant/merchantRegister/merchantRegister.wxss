@@ -1,0 +1,75 @@
+/* pages/merchantRegister/merchantRegisterHome/merchantRegisterHome.wxss */
+
+.menu {
+    margin-top: 20rpx;
+}
+
+.my-menu-right {
+    align-items: center;
+}
+
+.my-menu-right image:first-child {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 8rpx;
+    margin-right: 20rpx;
+}
+
+.my-menu-right image:last-child {
+    width: 18rpx;
+    height: 28rpx;
+}
+
+.menu-left text {
+    font-weight: bold;
+}
+
+.menu-right {
+    display: flex;
+    max-width: 500rpx;
+}
+
+.menu-right text {
+    max-width: 500rpx;
+    color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+}
+
+.menux .menu-right text:first-child {
+    color: #f00;
+    margin-right: 20rpx;
+}
+
+.btn {
+    background: #3670fb;
+    border-radius: 4px;
+    font-size: 32rpx;
+    color: #fff;
+    margin: 88rpx auto;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 84.8%;
+}
+
+.textarea-cont {
+    padding-bottom: 20rpx;
+}
+
+.img-list {
+    height: 140rpx;
+    white-space: nowrap;
+}
+
+.img-list image {
+    display: inline-block;
+    width: 200rpx;
+    height: 120rpx;
+    background: pink;
+    border-radius: 8rpx;
+    margin-right: 20rpx;
+}
+
+.menui {
+    position: relative;
+    top: -18rpx;
+}

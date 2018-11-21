@@ -1,0 +1,32 @@
+/* pages/merchant/merchantMoney/merchantMoney.wxss */
+
+.flex text {
+    margin-left: 20rpx;
+}
+
+.page-head {
+    text-align: center;
+    height: 154rpx;
+    background: linear-gradient(-136deg, #3670fb 4%, #4954e0 97%);
+    color: #fff;
+    padding: 40rpx 0;
+    font-size: 32rpx;
+    margin-bottom: 20rpx;
+}
+
+.page-head .text {
+    margin-top: 20rpx;
+    font-size: 64rpx;
+}
+
+.money-lsit {
+    padding: 32rpx 0;
+}
+
+.money-lsit>view:first-child {
+    margin-bottom: 12rpx;
+}
+
+.txt-right {
+    color: rgba(0, 0, 0, 0.4);
+}

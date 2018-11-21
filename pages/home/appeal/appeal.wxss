@@ -1,0 +1,18 @@
+/* pages/home/appeal/appeal.wxss */
+
+.textarea {
+    height: 320rpx;
+    /* padding-bottom: 80rpx; */
+    background: #FFF;
+}
+
+/* .textarea view {
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+} */
+
+.btn {
+    margin: 240rpx 60rpx 0;
+    height: 100rpx;
+}

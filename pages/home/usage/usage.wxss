@@ -1,0 +1,9 @@
+/* pages/usage/usage.wxss */
+
+page>view:first-child {
+    display: none;
+}
+
+.wxParse-head {
+    display: none;
+}

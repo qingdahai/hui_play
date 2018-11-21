@@ -1,0 +1,73 @@
+<!--pages/myInningsDetails/underway/underway.wxml-->
+<view class="page">
+    <view class="box">
+        <view class="box-top">
+            <image src="/images/lr_bg.png" class="bg-img"></image>
+            <view class="flex-average text-head">
+                <text class="text1">{{inningInfo.labelName}}·{{inningInfo.classifyName}}</text>
+                <text>{{inningInfo.minNum}}/{{inningInfo.maxNum}}</text>
+            </view>
+            <text class="text2">{{inningInfo.title}}</text>
+            <view class="text-time">
+                <image src="/images/time_write.png" class="icon-clock"></image>{{inningInfo.time}}</view>
+        </view>
+        <view class="box-bottom">
+            <view>房间号：{{inningInfo.chatroomId}}</view>
+            <view class="flex">
+                <image src="/images/position_gay.png"></image>
+                <text>距您：{{inningInfo.distance == 'undefined'?'0':inningInfo.distance}}KM</text>
+            </view>
+        </view>
+    </view>
+    <scroll-view class="flex inningsList" scroll-x="true">
+        <view class="flex">
+            <view class="creater" bindtap="friendMsg" data-id="{{inningInfo.gameUserList[0].userId}}">
+                <block wx:if="{{inningInfo.gameUserList[0].headUrl}}">
+                    <image src="{{inningInfo.gameUserList[0].headUrl}}"></image>
+                </block>
+                <block wx:else>
+                    <image src="/images/logo.png"></image>
+                </block>
+                <text>局主</text>
+            </view>
+            <view class="flex otherList">
+                <block wx:for="{{inningInfo.gameUserList}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                    <view wx:if="{{index != 0}}" bindtap="friendMsg" data-id="{{item.userId}}">
+                        <block wx:if="{{item.headUrl}}">
+                            <image src="{{item.headUrl}}"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="/images/logo.png"></image>
+                        </block>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="textActive">
+        <text>活动介绍</text>
+        <text>{{inningInfo.info}}</text>
+    </view>
+    <block wx:if="{{shopInfo}}">
+        <view class="merchant">
+            <view class="flex merchant-head">
+                <block wx:if="{{shopInfo.logo}}">
+                    <image src="{{shopInfo.logo}}"></image>
+                </block>
+                <block wx:else>
+                    <image src="/images/logo.png"></image>
+                </block>
+                <view>
+                    <view>{{shopInfo.shopName}}</view>
+                    <view>{{shopInfo.address}}</view>
+                </view>
+            </view>
+            <text>简介：{{shopInfo.shopInfo}}</text>
+            <scroll-view class="flex img-list" scroll-x="true">
+                <block wx:for="{{shopInfo.shopPhotoList}}" wx:key="**this" wx:for-item="item">
+                    <image src="{{item.imageUrl}}"></image>
+                </block>
+            </scroll-view>
+        </view>
+    </block>
+</view>

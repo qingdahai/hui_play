@@ -1,0 +1,42 @@
+/* pages/msgCenter/newFriend/newFriend.wxss */
+
+/**/
+
+.f-menu {
+    background: #fff;
+    padding: 0 32rpx;
+    margin-top: 20rpx;
+}
+
+.f-menu-list {
+    padding: 20rpx 0;
+}
+
+.f-menu-list>view:first-child view:last-child {
+    line-height: 90rpx;
+}
+
+.f-menu-list>view:last-child view:first-child {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.f-menu-list>view:last-child {
+    position: relative;
+}
+
+.f-menu-list>view:last-child view:last-child {
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+    background: #f00;
+    position: absolute;
+    right: 16rpx;
+    top: 60rpx;
+}
+
+image {
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}

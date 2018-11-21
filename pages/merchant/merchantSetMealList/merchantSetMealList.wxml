@@ -1,0 +1,30 @@
+<!--pages/merchant/merchantSetMealList/merchantSetMealList.wxml-->
+<view class="page">
+    <view hidden="{{newMerchant ? 1 : 0}}" class="menu">
+        <block wx:for="{{mealList}}" wx:for-item="item" wx:key="**this">
+            <view class="flex-average menu-list hr">
+                <view class="menu-left">{{item.mealName}}</view>
+                <view class="flex-average menu-right">
+                    <text>￥{{item.price}}/人</text>
+                    <text>({{item.maxNum}})人</text>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view hidden="{{newMerchant ? 0 : 1}}" class="menu">
+        <block wx:for="{{shopMealList}}" wx:for-item="item" wx:key="**this">
+            <view class="flex-average menu-list">
+                <view class="menu-left">{{item.mealName}}</view>
+                <view class="flex-average menu-right">
+                    <text>￥{{item.price}}/人</text>
+                    <text>({{item.maxNum}})人</text>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="button" bindtap="merchantSetMealAdd">
+        <image src="/images/add_tcx.png"></image>
+        <text>添加套餐</text>
+    </view>
+    <button class="btn" hidden="{{newMerchant ? 0 : 1}}" bindtap="addSuccess">确定</button>
+</view>

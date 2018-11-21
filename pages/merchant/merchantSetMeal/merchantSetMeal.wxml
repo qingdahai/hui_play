@@ -1,0 +1,14 @@
+<!--pages/merchant/merchantSetMeal/merchantSetMeal.wxml-->
+<view class="page">
+    <view class="menu">
+        <block wx:for="{{showLabel}}" wx:for-item="item" wx:key="**this">
+            <view class="menu-list txt-center" bindtap="merchantSetMealList" data-id="{{item.id}}">
+                {{item.name}}
+            </view>
+        </block>
+        <!-- <view class="menu-list txt-center hr" bindtap="merchantSetMealList" data-merchantSetMealType="0">聚餐套餐
+        </view>
+        <view class="menu-list txt-center" bindtap="merchantSetMealList" data-merchantSetMealType="1">桌游
+        </view> -->
+    </view>
+</view>

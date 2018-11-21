@@ -1,0 +1,104 @@
+/* pages/login/login.wxss */
+
+.page {
+    background: #fff;
+}
+
+.head-text {
+    font-size: 44rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-left: 72rpx;
+}
+
+.logo {
+    margin-left: 78rpx;
+    margin-top: 28rpx;
+}
+
+.logo image {
+    width: 120rpx;
+    height: 120rpx;
+    color: #fff;
+    background: rgba(54, 112, 251, 1);
+    border-radius: 8rpx;
+}
+
+.input-box {
+    margin: 0 72rpx;
+    margin-top: 80rpx;
+}
+
+.input-box view {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    height: 88rpx;
+    width: 606rpx;
+    margin-bottom: 40rpx;
+}
+
+.input-box view input {
+    margin: 20rpx;
+}
+
+.nav {
+    margin: 0 72rpx;
+    justify-content: flex-end;
+}
+
+.nav text {
+    margin: 0 20rpx;
+}
+
+.button {
+    margin: 130rpx auto 48rpx;
+}
+
+.button button {
+    width: 84.8%;
+    height: 100rpx;
+    color: #fff;
+    background: rgba(54, 112, 251, 1);
+    border-radius: 8rpx;
+}
+
+.merchant {
+    text-align: right;
+    margin: 0 7.5%;
+}
+
+.page-bottom {
+    padding: 0 88rpx;
+    margin-top: 60rpx;
+}
+
+/*
+.bottom-hr {
+    background: rgba(0, 0, 0, 0.1);
+    height: 2rpx;
+    top: 21rpx;
+    position: relative;
+}
+
+.page-bottom view:first-child {
+    text-align: center;
+}
+
+.page-bottom view:first-child text {
+    background: #fff;
+    padding: 0 20rpx;
+    position: relative;
+    z-index: 99;
+}
+*/
+
+.page-bottom view:last-child {
+    margin-top: 40rpx;
+}
+
+.page-bottom image {
+    width: 44rpx;
+    height: 36rpx;
+    margin-right: 20rpx;
+    float: left;
+}

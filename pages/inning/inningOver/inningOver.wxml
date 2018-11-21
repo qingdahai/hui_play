@@ -1,0 +1,76 @@
+<!--pages/inningsOver/inningsOver.wxml-->
+<view class="page">
+    <view class="menu">
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <image src="/images/logo.png" bindtap=""></image>
+                <text>Black</text>
+            </view>
+            <view class="menu-right">
+                <text bindtap="">+关注</text>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <image src="/images/logo.png"></image>
+                <text>杨滴羽</text>
+            </view>
+            <view class="menu-right">
+                <text class="my-friend">已关注</text>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <image src="/images/logo.png"></image>
+                <text>邵蓉</text>
+            </view>
+            <view class="menu-right">
+                <text class="my-friend">已关注</text>
+            </view>
+        </view>
+        <view class="menu-list flex-average">
+            <view class="menu-left">
+                <image src="/images/logo.png"></image>
+                <text>萧思思</text>
+            </view>
+            <view class="menu-right">
+                <text class="my-friend">已关注</text>
+            </view>
+        </view>
+    </view>
+    <view class="menu">
+        <view class="center-hr">
+            <view></view>
+            <text>商家评价</text>
+        </view>
+        <view class="flex star">
+            <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="item" wx:key="**this">
+                <image src="/images/{{shopCommont<item?'star_gay':'star_ye'}}.png" data-id="{{item}}" data-type="0" bindtap="assess"></image>
+            </block>
+        </view>
+        <view class="center-hr">
+            <view></view>
+            <text>组局质量评价</text>
+        </view>
+        <view class="flex star">
+            <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="item" wx:key="**this">
+                <image src="/images/{{gameCommont<item?'star_gay':'star_ye'}}.png" data-id="{{item}}" data-type="1" bindtap="assess"></image>
+            </block>
+        </view>
+    </view>
+    <view class="textarea">
+        <textarea bindinput="textareaInput" placeholder="在此可输入具体描述……"></textarea>
+    </view>
+    <button class="btn" bindtap="query_ok">确定</button>
+</view>
+<view class="myModal" hidden="{{myModalHide}}">
+    <view class="myModal-body">
+        <view class="myModal-head">提示</view>
+        <view class="myModal-cont">
+            感谢您的宝贵意见！
+        </view>
+        <view class="myModal-foot">
+            <button class="myModal-btn" bindtap="myModalBtn">确定</button>
+        </view>
+    </view>
+</view>

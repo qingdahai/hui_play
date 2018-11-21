@@ -1,0 +1,62 @@
+/* pages/create/create.wxss */
+
+.page {
+    background: #fff;
+}
+
+/**/
+
+.flex-average {
+    flex-wrap: wrap;
+    padding: 0 32rpx;
+}
+
+.posi {
+    position: relative;
+    margin-bottom: 20rpx;
+}
+
+.posi text {
+    position: absolute;
+    z-index: 99;
+    left: 20rpx;
+    top: 10rpx;
+    padding: 20rpx;
+    color: #fff;
+}
+
+.posi image {
+    width: 300rpx;
+    height: 160rpx;
+}
+
+/**/
+
+.btn {
+    margin: 0 56rpx 126rpx 58rpx;
+}
+
+/**/
+
+.myModal-cont {
+    padding: 56rpx 40rpx !important;
+}
+
+.myModal-cont input {
+    font-size: 24rpx;
+    padding: 28rpx 10rpx 26rpx 12rpx;
+    border: 2rpx solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+
+.myModal-foot button {
+    width: 214rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-bottom: 40rpx;
+}
+
+.myModal-foot button.cancel {
+    background: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.4);
+}

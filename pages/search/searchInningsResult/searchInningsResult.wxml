@@ -1,0 +1,62 @@
+<!--pages/searchInningsResult/searchInningsResult.wxml-->
+<view class="page">
+    <view class="inning-box" bindtap="inningsMsg">
+        <view class="inning-top">
+            <image class="bg-img" src="/images/lr_bg.png"></image>
+            <view class="text-header flex-average">
+                <view>桌游·狼人杀</view>
+                <view>12/15</view>
+            </view>
+            <view class="text-center">一起来玩狼人杀！！！</view>
+            <view class="text-footer flex">
+                <image src="/images/time_write.png"></image>
+                <view>00:05:19</view>
+            </view>
+        </view>
+        <view class="inning-bottom flex-average">
+            <view class="inning-bottom-left flex">
+                <image src="/images/logo.png"></image>
+                <view>
+                    <view>多伦多狼人杀俱乐部</view>
+                    <view class="inning-bottom-text">
+                        <image src="/images/position_gay.png"></image>
+                        <text>多伦多中心广场</text>
+                    </view>
+                </view>
+            </view>
+            <view class="inning-bottom-right flex">
+                <image src="/images/lightning.png"></image>
+                <view>火线救急</view>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="inning-box" bindtap="inningsMsg">
+        <view class="inning-top">
+            <image class="bg-img" src="/images/lr_bg.png"></image>
+            <view class="text-header flex-average">
+                <view>桌游·狼人杀</view>
+                <view>12/15</view>
+            </view>
+            <view class="text-center">一起来玩狼人杀！！！</view>
+            <view class="text-footer flex">
+                <image src="/images/time_write.png"></image>
+                <view>00:05:19</view>
+            </view>
+        </view>
+        <view class="inning-bottom flex-average">
+            <view class="inning-bottom-left flex">
+                <image src="/images/logo.png"></image>
+                <view>
+                    <view>多伦多狼人杀俱乐部</view>
+                    <view class="inning-bottom-text">
+                        <image src="/images/position_gay.png"></image>
+                        <text>多伦多中心广场</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>

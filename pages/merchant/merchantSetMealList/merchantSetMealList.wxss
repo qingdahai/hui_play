@@ -1,0 +1,45 @@
+/* pages/merchant/merchantSetMealList/merchantSetMealList.wxss */
+
+.menu-right {
+    min-width: 260rpx;
+}
+
+.menu-right text:first-child {
+    color: #f00;
+}
+
+.menu-right text:last-child {
+    margin-left: 36rpx;
+}
+
+.button {
+    margin-top: 20rpx;
+    bottom: 88rpx;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
+    color: #3670fb;
+    width: 91.5%;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #fff;
+    margin-left: 4.3%;
+}
+
+.button image {
+    width: 40rpx;
+    height: 40rpx;
+    position: relative;
+    top: 10rpx;
+    left: -10rpx;
+}
+
+.btn {
+    background: #3670fb;
+    border-radius: 4px;
+    font-size: 32rpx;
+    color: #fff;
+    margin: 88rpx auto;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 84.8%;
+}

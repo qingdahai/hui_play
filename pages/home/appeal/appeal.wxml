@@ -1,0 +1,16 @@
+<!--pages/home/appeal/appeal.wxml-->
+<view class="page">
+    <view class="textarea">
+        <textarea bindinput="textareaInput" maxlength='200' placeholder="为什么要申诉？">
+            <view>您还可以输入{{inputNumber}}字</view>
+        </textarea>
+    </view>
+    <button class="btn" bindtap="query_ok">提交</button>
+
+
+<!-- 
+    <textarea placeholder="为什么要申诉？" bindinput="inputVal" >
+        <view>您还可以输入200字</view>
+    </textarea>
+    <button class="btn" bindtap="query_ok">提交</button> -->
+</view>

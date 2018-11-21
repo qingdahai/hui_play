@@ -1,0 +1,171 @@
+/* pages/myInningsDetails/underway/underway.wxss */
+
+.box {
+    height: 370rpx;
+    margin: 20rpx 32rpx 40rpx;
+    border-radius: 8rpx;
+}
+
+.box-top {
+    height: 178rpx;
+    position: relative;
+    color: #fff;
+    letter-spacing: 5rpx;
+    padding: 36rpx;
+}
+
+.box-top .bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.box-top .text-head {
+    position: relative;
+    font-size: 24rpx;
+    line-height: 56rpx;
+}
+
+.box-top .text1 {
+    font-size: 40rpx;
+    line-height: 56rpx;
+}
+
+.box-top .text2 {
+    position: relative;
+    top: 10rpx;
+}
+
+.box-top .text-time {
+    position: absolute;
+    bottom: 36rpx;
+    font-size: 24rpx;
+}
+
+.box-top .text-time .icon-clock {
+    width: 24rpx;
+    height: 24rpx;
+    position: relative;
+    top: 3rpx;
+    margin-right: 12rpx;
+}
+
+.box-bottom {
+    padding: 24rpx 32rpx;
+    background: #fff;
+}
+
+.box-bottom view:last-child {
+    font-size: 24rpx;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 10rpx;
+}
+
+.box-bottom view:last-child image {
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 10rpx;
+    position: relative;
+    top: 8rpx;
+}
+
+/**/
+
+.inningsList{
+    background: #fff;
+    height: 90rpx;
+    padding: 20rpx 32rpx;
+}
+
+.creater {
+    margin-right: 64rpx;
+    position: relative;
+}
+
+.creater image {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+
+.creater text {
+    position: absolute;
+    background: #3670fb;
+    color: #fff;
+    text-align: center;
+    border: 2rpx solid #fff;
+    border-radius: 200rpx;
+    width: 76rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    right: -36rpx;
+    bottom: 0;
+}
+
+.otherList>view {
+    margin-right: 64rpx;
+    position: relative;
+}
+
+.otherList image {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+
+.textActive {
+    background: #fff;
+    padding: 20rpx 32rpx;
+    border-top: 2rpx solid rgba(0, 0, 0, 0.06);
+    border-bottom: 2rpx solid rgba(0, 0, 0, 0.06);
+}
+
+.textActive text {
+    display: block;
+}
+
+.textActive text:last-child {
+    line-height: 44rpx;
+    color: rgba(0, 0, 0, 0.4);
+    margin-top: 18rpx;
+}
+
+.merchant {
+    padding: 20rpx 32rpx;
+    background: #fff;
+}
+
+.merchant .merchant-head image {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.merchant .merchant-head view view:last-child {
+    font-size: 24rpx;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.merchant text {
+    display: block;
+    padding: 20rpx 0;
+    line-height: 44rpx;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.img-list {
+    height: 120rpx;
+    white-space: nowrap;
+}
+
+.img-list image {
+    display: inline-block;
+    width: 200rpx;
+    height: 120rpx;
+    background: pink;
+    border-radius: 8rpx;
+    margin-right: 20rpx;
+}

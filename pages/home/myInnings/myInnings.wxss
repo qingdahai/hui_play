@@ -1,0 +1,151 @@
+/* pages/join/join.wxss */
+
+.page-head {
+    position: fixed;
+    height: 132rpx;
+    z-index: 9999;
+    width: 100%;
+    background: #f7f7f7;
+}
+
+.tab-head {
+    width: 360rpx;
+    height: 72rpx;
+    margin: 20rpx auto 40rpx;
+    background: #fff;
+}
+
+.tab-item {
+    display: inline-block;
+    text-align: center;
+    width: 180rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.tab-item.active {
+    background: #3670fb;
+    color: #fff;
+}
+
+.tab-item:first-child.active {
+    border-radius: 4px 0 0 4px;
+}
+
+.tab-item:last-child.active {
+    border-radius: 0 4px 4px 0;
+}
+
+.tab-content {
+    margin-top: 132rpx;
+}
+
+.scoll-h {
+    height: 100%;
+}
+
+.box {
+    height: 370rpx;
+    margin: 0 32rpx 40rpx;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 8rpx;
+}
+
+.box-top {
+    height: 178rpx;
+    position: relative;
+    color: #fff;
+    font-size: 40rpx;
+    letter-spacing: 5rpx;
+    padding: 36rpx;
+}
+
+.box-top .bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.box-top .text {
+    font-size: 28rpx;
+}
+
+.box-top .text-time {
+    position: absolute;
+    bottom: 36rpx;
+    font-size: 24rpx;
+}
+
+.box-top .text-time .icon-clock {
+    width: 24rpx;
+    height: 24rpx;
+    position: relative;
+    top: 3rpx;
+    margin-right: 12rpx;
+}
+
+.box-bottom {
+    height: 72rpx;
+    line-height: 72rpx;
+    padding: 24rpx 36rpx;
+}
+
+.user-head-img {
+    width: 72rpx;
+    height: 72rpx;
+    margin-right: 12rpx;
+    border-radius: 50%;
+}
+
+.style1 view:first-child, .style2 view:first-child, .style3 view:first-child,
+.style4 view:first-child {
+    margin-right: 40rpx;
+}
+
+.style1 view:last-child, .style2 view:last-child, .style3 view:last-child,
+.style4 view:last-child {
+    color: #f00;
+}
+
+.style2 view:first-child {
+    border: 2rpx solid #3670fb;
+    color: #3670fb;
+    padding: 0 32rpx;
+    border-radius: 4px;
+    height: 56rpx;
+    line-height: 56rpx;
+    margin-top: 8rpx;
+}
+
+.style3 view:first-child {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.style4 view:first-child {
+    color: #3670fb;
+}
+
+.button {
+    position: absolute;
+    bottom: 88rpx;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
+    color: #3670fb;
+    width: 91.5%;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #fff;
+    left: 4.3%;
+}
+
+.button image {
+    width: 40rpx;
+    height: 40rpx;
+    position: relative;
+    top: 10rpx;
+    left: -10rpx;
+}

@@ -1,0 +1,43 @@
+/* pages/album/album.wxss */
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list>view {
+    width: 168rpx;
+    height: 168rpx;
+    margin: 40rpx 36rpx 0;
+    position: relative;
+}
+
+.list>view>image {
+    width: 168rpx;
+    height: 168rpx;
+}
+
+.delbutton {
+    position: absolute;
+    right: -17rpx;
+    top: -17rpx;
+    width: 34rpx;
+    height: 34rpx;
+    border-radius: 50%;
+}
+
+.delbutton>image {
+    width: 34rpx;
+    height: 34rpx;
+}
+
+.btn {
+    background: #3670fb;
+    border-radius: 4px;
+    font-size: 32rpx;
+    color: #fff;
+    margin: 88rpx auto;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 84.8%;
+}

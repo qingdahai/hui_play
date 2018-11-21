@@ -1,0 +1,96 @@
+<!--pages/goCreate/goCreate.wxml-->
+<view class="page">
+    <view class="menu">
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>类型</text>
+            </view>
+            <view class="menu-right">
+                <text>{{labelName}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average">
+            <view class="menu-left">
+                <text>项目</text>
+            </view>
+            <view class="menu-right">
+                <text>{{classifyName}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="menu">
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>局标题</text>
+            </view>
+            <view class="menu-center">
+                <input placeholder="请填写局标题" bindinput="inningTitle"></input>
+            </view>
+            <view class="menu-right"></view>
+        </view>
+        <view class="menu-list flex-average">
+            <view class="menu-left">
+                <text>活动介绍</text>
+            </view>
+        </view>
+        <view>
+            <textarea placeholder="在这里添加关于活动的详细描述吧" bindinput="inningInfo"></textarea>
+        </view>
+    </view>
+    <view class="menu">
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>时间</text>
+            </view>
+            <view class="menu-right">
+                <view>
+                    <picker mode="multiSelector" value="{{selectTimeShow}}" bindchange="bindMultiPickerChange" range="{{selectTime}}">
+                        <view>
+                            {{inningTime}}
+                        </view>
+                    </picker>
+                </view>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average hr">
+            <view class="menu-left">
+                <text>人数</text>
+            </view>
+            <view class="menu-right" bindtap="goSetPeopleNum">
+                <text>{{numShow}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average">
+            <view class="menu-left">
+                <text>地点</text>
+            </view>
+            <view class="menu-right" bindtap="goSetAddress">
+                <text>{{placeName}}</text>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+        <view class="menu-list flex-average" hidden="{{hideSelectedMeal}}">
+            <view class="menu-left">
+                <text>套餐</text>
+            </view>
+            <view class="menu-right">
+                <block wx:for="{{shopInfo.shopMealList}}" wx:for-item="item" wx:key="**this">
+                    <block wx:if="{{item.active}}">
+                        <text>{{item.mealName}}(￥{{item.price}})</text>
+                    </block>
+                </block>
+                <image src="/images/drop_right.png"></image>
+            </view>
+        </view>
+    </view>
+    <button class="btn" bindtap="create">支付并创建</button>
+</view>
+
+<!-- <view class="page set-people-num">
+
+
+</view> -->

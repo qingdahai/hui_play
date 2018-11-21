@@ -1,0 +1,109 @@
+/* pages/create/selectMerchantMsg/selectMerchantMsg.wxss */
+
+.crousel, swiper-item {
+    height: 296rpx;
+    overflow: hidden;
+}
+
+.crousel {
+    position: relative;
+}
+
+.crousel>view {
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+    color: #fff;
+}
+
+.shopInfo-header {
+    background: #fff;
+    padding: 0 20rpx;
+}
+
+.shopInfo-header>view:first-child {
+    padding: 20rpx 0;
+}
+
+.shopInfo-header>view:first-child>view.flex {
+    justify-content: center;
+    align-items: center;
+}
+
+.shopInfo-header>view:first-child view.logo {
+    width: 72rpx;
+    height: 72rpx;
+    position: relative;
+    margin-right: 20rpx;
+}
+
+.shopInfo-header>view:first-child view.logo image.logoimg {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+}
+
+.shopInfo-header>view:first-child view.logo image.vip {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.shopInfo-header>view:first-child view.shopInfo-header-right image {
+    width: 18rpx;
+    height: 20rpx;
+    margin-right: 10rpx;
+}
+
+.shopInfo-header>view:last-child {
+    height: 96rpx;
+    line-height: 96rpx;
+}
+
+.shopInfo-header>view:last-child  image {
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 10rpx;
+}
+
+/* */
+
+.menux {
+    margin: 20rpx 0;
+    background: #fff;
+}
+
+.menux view {
+    padding: 20rpx 32rpx;
+}
+
+.menu-list text {
+    color: #f00;
+}
+
+/**/
+
+.btn {
+    margin: 80rpx 56rpx 40rpx;
+}
+
+/**/
+
+.itemType {
+    display: inline-flex;
+}
+
+.itemType>view {
+    width: 34rpx;
+    height: 34rpx;
+    border: 2rpx solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.itemType>view>image {
+    width: 36rpx;
+    height: 36rpx;
+}

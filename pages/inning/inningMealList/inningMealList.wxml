@@ -1,0 +1,19 @@
+<!--pages/myInningsDetails/inningMealList/inningMealList.wxml-->
+<view class="page">
+
+    <view class="menu">
+        <block wx:for="{{mealList}}" wx:for-item="item" wx:key="**this">
+            <view class="menu-list flex-average hr" data-id="{{item.id}}" bindtap="selectMeal">
+                <view class="menu-left">
+                    <text>{{item.mealName}}</text>
+                </view>
+                <view class="menu-right">
+                    <view>
+                        <text>￥{{item.price}}/人</text>
+                        <text>（还剩{{item.maxNum}}）</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,239 @@
+<!--pages/joinShow/joinShow.wxml-->
+<view class="page">
+    <view>
+        <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+            <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" data-title="全部" bindtap="swichNav">全部</view>
+            <block wx:for="{{classify}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                <view class="tab-item {{currentTab==index+1?'active':''}}" data-current="{{index+1}}" data-id="{{item.id}}" data-title="{{item.name}}" bindtap="swichNav">
+                    {{item.classifyName}}
+                </view>
+            </block>
+        </scroll-view>
+        <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+            <swiper-item>
+                <scroll-view scroll-y="true" class="scoll-h">
+                    <block wx:for="{{inningsAll}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                        <view class="inning-box" data-id="{{item.id}}" bindtap="inningMsg">
+                            <view class="inning-top">
+                                <block wx:if="{{item.labelId == 1}}">
+                                    <image class="bg-img" src="/images/lr_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 2}}">
+                                    <image class="bg-img" src="/images/yd_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 3}}">
+                                    <image class="bg-img" src="/images/cc_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 4}}">
+                                    <image class="bg-img" src="/images/bd_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 5}}">
+                                    <image class="bg-img" src="/images/cg_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 6}}">
+                                    <image class="bg-img" src="/images/d_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 7}}">
+                                    <image class="bg-img" src="/images/sg_bg.png"></image>
+                                </block>
+                                <block wx:else>
+                                    <image class="bg-img" src="/images/dy_bg.png"></image>
+                                </block>
+                                <view class="text-header flex-average">
+                                    <view>{{item.labelName}}·{{item.classifyName}}</view>
+                                    <view>{{item.nowNum}}/{{item.maxNum}}</view>
+                                </view>
+                                <view class="text-center">{{item.title}}</view>
+                                <view class="text-footer flex">
+                                    <image src="/images/time_write.png"></image>
+                                    <block wx:if="{{item.startTime > data_time && item.startTime < data_time + 60 * 60 * 24 * 1000}}">
+                                        <view>{{countDownTime[index]}}</view>
+                                    </block>
+                                    <block wx:else>
+                                        <view>{{item.startTime_zh}}</view>
+                                    </block>
+                                </view>
+                            </view>
+                            <view class="inning-bottom flex-average">
+                                <view class="inning-bottom-left flex">
+                                    <block wx:if="{{item.gameLogo}}">
+                                        <image src="{{item.gameLogo}}"></image>
+                                    </block>
+                                    <block wx:else>
+                                        <image src="/images/logo.png"></image>
+                                    </block>
+                                    <view>
+                                        <view>{{item.gameName}}</view>
+                                        <view class="inning-bottom-text">
+                                            <image src="/images/position_gay.png"></image>
+                                            <text>{{item.address}}({{item.distance}})</text>
+                                        </view>
+                                    </view>
+                                </view>
+                                <view class="inning-bottom-right flex">
+                                    <image src="/images/lightning.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+
+                    <!-- <view class="inning-box" bindtap="inningMsg">
+                        <view class="inning-top">
+                            <image class="bg-img" src="/images/lr_bg.png"></image>
+                            <view class="text-header flex-average">
+                                <view>桌游·狼人杀</view>
+                                <view>12/15</view>
+                            </view>
+                            <view class="text-center">一起来玩狼人杀！！！</view>
+                            <view class="text-footer flex">
+                                <image src="/images/time_write.png"></image>
+                                <view>00:05:19</view>
+                            </view>
+                        </view>
+                        <view class="inning-bottom flex-average">
+                            <view class="inning-bottom-left flex">
+                                <image src="/images/test.png"></image>
+                                <view>
+                                    <view>多伦多狼人杀俱乐部</view>
+                                    <view class="inning-bottom-text">
+                                        <image src="/images/position_gay.png"></image>
+                                        <text>多伦多中心广场</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="inning-bottom-right flex">
+                                <image src="/images/lightning.png"></image>
+                                <view>火线救急</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="inning-box" bindtap="inningMsg">
+                        <view class="inning-top">
+                            <image class="bg-img" src="/images/lr_bg.png"></image>
+                            <view class="text-header flex-average">
+                                <view>桌游·狼人杀</view>
+                                <view>12/15</view>
+                            </view>
+                            <view class="text-center">一起来玩狼人杀！！！</view>
+                            <view class="text-footer flex">
+                                <image src="/images/time_write.png"></image>
+                                <view>00:05:19</view>
+                            </view>
+                        </view>
+                        <view class="inning-bottom flex-average">
+                            <view class="inning-bottom-left flex">
+                                <image src="/images/test.png"></image>
+                                <view>
+                                    <view>多伦多狼人杀俱乐部</view>
+                                    <view class="inning-bottom-text">
+                                        <image src="/images/position_gay.png"></image>
+                                        <text>多伦多中心广场</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="inning-bottom-right flex">
+                                <image src="/images/lightning.png"></image>
+                                <view>火线救急</view>
+                            </view>
+                        </view>
+                    </view> -->
+                </scroll-view>
+            </swiper-item>
+            <swiper-item wx:for="{{classify}}" wx:for-item="classifyItem" wx:key="**this">
+                <scroll-view scroll-y="true" class="scoll-h">
+                    <block wx:for="{{innings}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+                        <!-- <block wx:if="{{item.classifyName==classifyItem.classifyName}}"> -->
+                        <view class="inning-box" bindtap="inningMsg">
+                            <view class="inning-top">
+                                <block wx:if="{{item.labelId == 1}}">
+                                    <image class="bg-img" src="/images/lr_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 2}}">
+                                    <image class="bg-img" src="/images/yd_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 3}}">
+                                    <image class="bg-img" src="/images/cc_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 4}}">
+                                    <image class="bg-img" src="/images/bd_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 5}}">
+                                    <image class="bg-img" src="/images/cg_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 6}}">
+                                    <image class="bg-img" src="/images/d_bg.png"></image>
+                                </block>
+                                <block wx:elif="{{item.labelId == 7}}">
+                                    <image class="bg-img" src="/images/sg_bg.png"></image>
+                                </block>
+                                <block wx:else>
+                                    <image class="bg-img" src="/images/dy_bg.png"></image>
+                                </block>
+                                <view class="text-header flex-average">
+                                    <view>{{item.labelName}}·{{item.classifyName}}</view>
+                                    <view>{{item.nowNum}}/{{item.maxNum}}</view>
+                                </view>
+                                <view class="text-center">{{item.title}}</view>
+                                <view class="text-footer flex">
+                                    <image src="/images/time_write.png"></image>
+                                    <view>{{item.startTime}}</view>
+                                </view>
+                            </view>
+                            <view class="inning-bottom flex-average">
+                                <view class="inning-bottom-left flex">
+                                    <block wx:if="{{item.gameLogo}}">
+                                        <image src="{{item.gameLogo}}"></image>
+                                    </block>
+                                    <block wx:else>
+                                        <image src="/images/logo.png"></image>
+                                    </block>
+                                    <view>
+                                        <view>{{item.gameName}}</view>
+                                        <view class="inning-bottom-text">
+                                            <image src="/images/position_gay.png"></image>
+                                            <text>{{item.address}}({{item.distance}})</text>
+                                        </view>
+                                    </view>
+                                </view>
+                                <view class="inning-bottom-right flex">
+                                    <image src="/images/lightning.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                        <!-- </block> -->
+                    </block>
+                    <!-- <view class="inning-box" bindtap="inningMsg">
+                        <view class="inning-top">
+                            <image class="bg-img" src="/images/lr_bg.png"></image>
+                            <view class="text-header flex-average">
+                                <view>桌游·狼人杀</view>
+                                <view>12/15</view>
+                            </view>
+                            <view class="text-center">一起来玩狼人杀！！！</view>
+                            <view class="text-footer flex">
+                                <image src="/images/time_write.png"></image>
+                                <view>00:05:19</view>
+                            </view>
+                        </view>
+                        <view class="inning-bottom flex-average">
+                            <view class="inning-bottom-left flex">
+                                <image src="/images/test.png"></image>
+                                <view>
+                                    <view>多伦多狼人杀俱乐部</view>
+                                    <view class="inning-bottom-text">
+                                        <image src="/images/position_gay.png"></image>
+                                        <text>多伦多中心广场</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="inning-bottom-right flex">
+                                <image src="/images/lightning.png"></image>
+                                <view>火线救急</view>
+                            </view>
+                        </view>
+                    </view> -->
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

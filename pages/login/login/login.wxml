@@ -1,0 +1,38 @@
+<!--pages/login/login.wxml-->
+<view class="page">
+    <view class="head-text">登录HUI玩</view>
+    <view class="logo">
+        <image src="/images/logo.png"></image>
+    </view>
+    <view class="input-box">
+        <view>
+            <input bindinput="loginName" placeholder="{{placeholder}}" maxlength="11"></input>
+        </view>
+        <view>
+            <input bindinput="loginPwd" type="password" placeholder="密码"></input>
+        </view>
+    </view>
+    <view class="flex nav">
+        <view hidden="{{hiddend}}" bindtap="register">没有账号？立即注册!</view>
+        <text hidden="{{hiddend}}">|</text>
+        <view bindtap="forgetPassword">忘记密码?</view>
+    </view>
+    <view class="button">
+        <button bindtap="login" data-userType="{{userType}}">登录</button>
+    </view>
+    <view class="merchant" bindtap="merchantLogin">{{loginType}}>></view>
+    <view class="page-bottom" hidden="{{hiddend}}">
+        <view class="center-hr">
+            <view></view>
+            <text>使用第三方平台登录</text>
+        </view>
+        <view class="flex-average">
+            <view></view>
+            <view bindtap="thirdLogin">
+                <image src="/images/wechat_icon_s.png"></image>
+                <text>微信登录</text>
+            </view>
+            <view></view>
+        </view>
+    </view>
+</view>

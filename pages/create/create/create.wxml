@@ -1,0 +1,25 @@
+<!--pages/create/create.wxml-->
+<view class="page">
+    <view class="flex-average">
+        <block wx:for="{{labelTag}}" wx:for-item="item" wx:key="*this">
+            <view class="posi" bindtap="inning" data-id="{{item.id}}">
+                <image src="/images/{{item.src}}.png"></image>
+                <text>{{item.name}}</text>
+            </view>
+        </block>
+    </view>
+    <!-- <button class="btn" bindtap="nextStep">下一步</button> -->
+</view>
+
+<view class="myModal" hidden="{{myModalHide}}">
+    <view class="myModal-body">
+        <view class="myModal-head">自定义</view>
+        <view class="myModal-cont">
+            <input maxlength='10' bindinput="inputVal" value="{{inputVal}}" placeholder="请填写您想要创建的项目（不超过10字）"></input>
+        </view>
+        <view class="myModal-foot flex-average">
+            <button class="cancel" bindtap="myModalCancel">取消</button>
+            <button bindtap="myModalOk">确定</button>
+        </view>
+    </view>
+</view>

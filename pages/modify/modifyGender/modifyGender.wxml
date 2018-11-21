@@ -1,0 +1,14 @@
+<!--pages/modifyGender/modifyGender.wxml-->
+<view class="page">
+    <view data-gender="男" bindtap="select" class="list0">
+        <view class="hr flex-average">
+            <text>男</text>
+            <image src="/images/right_icon.png" hidden="{{showselect!=1}}"></image>
+        </view>
+    </view>
+    <view data-gender="女" bindtap="select" class="flex-average list1">
+        <text>女</text>
+        <image src="/images/right_icon.png" hidden="{{showselect!=2}}"></image>
+    </view>
+    <button bindtap="modify" data-selectgender="{{selectgender}}">确定</button>
+</view>

@@ -1,0 +1,17 @@
+<!--pages/album/album.wxml-->
+<view class="page">
+    <view class="list">
+        <view bindtap="chooseimage" hidden="{{addbutton}}" class="addbutton">
+            <image src="/images/add_photo.png"></image>
+        </view>
+        <block wx:for="{{albums}}" wx:for-item="item" wx:for-index="index" wx:key="**this">
+            <view class="posi" bindlongpress="deleteImagebtn">
+                <image src="{{item}}" data-index="{{index}}" catchTap="chooseImageTap" mode="aspectFit" bindtap="previewImg"></image>
+                <view class="delbutton" data-index="{{index}}" hidden="{{delbutton}}" bindtap="deleteImage">
+                    <image src="/images/delete.png"></image>
+                </view>
+            </view>
+        </block>
+    </view>
+    <button class="btn" hidden="{{hideBtn}}" bindtap="query_ok">确定</button>
+</view>

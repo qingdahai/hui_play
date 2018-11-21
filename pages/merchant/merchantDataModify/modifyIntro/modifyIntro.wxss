@@ -1,0 +1,12 @@
+/* pages/merchant/merchantDataModify/modifyIntro/modifyIntro.wxss */
+
+.textarea {
+    height: 284rpx;
+}
+
+button {
+    color: #fff;
+    background: #3670fb;
+    border-radius: 4px;
+    margin: 340rpx 58rpx;
+}

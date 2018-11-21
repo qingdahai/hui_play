@@ -1,0 +1,57 @@
+/* pages/merchant/merchantSetMealAdd/merchantSetMealAdd.wxss */
+
+.menu {
+    margin-top: 20rpx;
+}
+
+.menu-center {
+    position: absolute;
+    left: 292rpx;
+    width: 356rpx;
+}
+
+.button {
+    color: #fff;
+    background: #3670fb;
+    border-radius: 4px;
+    margin: 340rpx 58rpx;
+}
+
+.myModal-cont {
+    padding: 80rpx 0;
+}
+
+.myModal-cont>view {
+    margin: 80rpx auto;
+    font-size: 28rpx;
+}
+
+.itemType {
+    display: inline-flex;
+    align-content: stretch;
+    width: 33.33%;
+    margin-top: 44rpx;
+}
+
+.itemType>view {
+    width: 36rpx;
+    height: 36rpx;
+    border: 2rpx solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.itemType>view.active {
+    border-color: #3670fb;
+}
+
+.itemType>view>image {
+    width: 36rpx;
+    height: 36rpx;
+}
+.myModal-foot button {
+    width: 214rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-bottom: 40rpx;
+}

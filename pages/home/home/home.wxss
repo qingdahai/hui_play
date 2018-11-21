@@ -1,0 +1,42 @@
+/* pages/home/home.wxss */
+
+.page-head {
+    height: 328rpx;
+}
+
+.home-head {
+    background: #4954e0;
+    padding: 40rpx 32rpx;
+    color: #fff;
+    margin-bottom: 40rpx;
+}
+
+.home-head>view {
+    align-items: center;
+}
+
+.user-head-img {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 20rpx;
+    border-radius: 50%;
+}
+
+.head-text {
+    padding: 9rpx;
+    max-width: 500rpx;
+}
+
+.user-name, .user-fiends {
+    padding: 9rpx 0;
+}
+
+.user-fiends>view:first-child {
+    margin-right: 60rpx;
+}
+
+.home-drop-right {
+    width: 20rpx;
+    height: 30rpx;
+    margin-top: 45rpx;
+}

@@ -1,0 +1,43 @@
+/* pages/inningsExit/inningsExit.wxss */
+
+.page-head {
+    text-align: center;
+    padding: 24rpx 0;
+    background: #fff;
+    margin-top: 20rpx;
+    font-size: 32rpx;
+}
+
+/**/
+
+.textarea {
+    height: 200rpx;
+}
+
+.btn {
+    height: 100rpx;
+    margin: 206rpx 56rpx 88rpx;
+}
+
+/**/
+
+textarea {
+    z-index: 88 !important;
+}
+
+.myModal-cont view {
+    text-align: center;
+    padding: 80rpx 0;
+}
+
+.myModal-foot button {
+    width: 214rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-bottom: 40rpx;
+}
+
+.myModal-foot button.cancel {
+    background: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.4);
+}

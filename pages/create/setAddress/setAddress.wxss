@@ -1,0 +1,21 @@
+/* pages/create/selectAddress/selectAddress.wxss */
+
+.menu-list {
+    position: relative;
+    align-items: center;
+}
+
+input {
+    position: absolute;
+    left: 22%;
+    top: 18rpx;
+    width: 440rpx;
+}
+
+.btn {
+    position: absolute;
+    bottom: 88rpx;
+    left: 58rpx;
+    width: 636rpx;
+    height: 100rpx;
+}

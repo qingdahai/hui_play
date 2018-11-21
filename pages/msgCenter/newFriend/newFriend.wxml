@@ -1,0 +1,36 @@
+<!--pages/msgCenter/newFriend/newFriend.wxml-->
+<view class="page">
+   <view class="search" bindtap="gosearch">
+        <view class="flex-average">
+            <view class="flex search-left">
+                <image class="inputSearchImg" src="/images/search.png"></image>
+                <view>
+                    <input placeholder="手机号码/组局号" disabled></input>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="f-menu">
+        <view class="f-menu-list flex-average hr">
+            <view class="flex">
+                <image src="/images/logo.png"></image>
+                <view>阿发关注了您</view>
+            </view>
+            <view>
+                <view>14:09</view>
+                <view></view>
+            </view>
+        </view>
+        <view class="f-menu-list flex-average hr">
+            <view class="flex">
+                <image src="/images/logo.png"></image>
+                <view>阿发关注了您</view>
+            </view>
+            <view>
+                <view>14:09</view>
+                <view></view>
+            </view>
+        </view>
+    </view>
+</view>

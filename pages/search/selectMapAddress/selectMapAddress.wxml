@@ -1,0 +1,38 @@
+<!--mapLocation.wxml-->
+
+<view class="page">
+    <!--搜索-->
+    <view class="search">
+        <view class="flex-average">
+            <view class="flex search-left">
+                <image class="inputSearchImg" src="/images/search.png"></image>
+                <view>
+                    <input bindfocus="setPageTitle" bindblur="defalutPageTitle" bindinput="inputVal" placeholder="搜索具体地点"></input>
+                </view>
+            </view>
+            <view class="flex search-right">
+                <view>|</view>
+                <text bindtap="selectCity">{{positionCity}}</text>
+                <image bindtap="selectCity" class="select-city" src='/images/drop_down.png'></image>
+            </view>
+        </view>
+    </view>
+    <!-- 地图 -->
+    <view class="mapView">
+        <map id="myMap" longitude="{{currentLon}}" latitude="{{currentLat}}" markers="{{markers}}" scale="16" bindmarkertap="markertap" class="map">
+            <cover-view class="myAddress">
+                <cover-view class="flex-average">
+                    <cover-view class="flex left">
+                        <cover-image src="/images/position_gay_b.png"></cover-image>
+                        <cover-view>
+                            <cover-view>{{myAddress.formatted_addresses.recommend}}</cover-view>
+                            <cover-view>{{myAddress.address}}</cover-view>
+                        </cover-view>
+                    </cover-view>
+                    <cover-image class="right" src="/images/drop_right.png"></cover-image>
+                </cover-view>
+                <cover-view class="button" bindtap="selectAddress">确定</cover-view>
+            </cover-view>
+        </map>
+    </view>
+</view>

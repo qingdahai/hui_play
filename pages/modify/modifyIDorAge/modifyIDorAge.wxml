@@ -1,0 +1,8 @@
+<!--pages/modifyID/modifyID.wxml-->
+<view class="page">
+    <view class="flex-average">
+        <input value="{{inputval}}" bindinput="inputval" maxlength="{{maxlength}}"></input>
+        <image src="/images/delete.png" bindtap="resetinput"></image>
+    </view>
+    <button bindtap="modify" data-value="{{inputval}}" data-settype="{{settype}}">确定</button>
+</view>

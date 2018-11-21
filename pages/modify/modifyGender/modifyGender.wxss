@@ -1,0 +1,25 @@
+/* pages/modifyGender/modifyGender.wxss */
+
+.list0{
+    padding: 0 32rpx;
+    background: #FFF;
+    margin-top: 20rpx;
+}
+.hr{
+    border-bottom: 2rpx solid #f7f7f7;
+    padding: 28rpx 0;
+}
+.list1{
+    padding: 28rpx 32rpx;
+    background: #FFF;
+}
+image{
+    width: 40rpx;
+    height: 26rpx;
+}
+button {
+    color: #fff;
+    background: #3670fb;
+    border-radius: 4px;
+    margin: 340rpx 58rpx;
+}

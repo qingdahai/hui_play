@@ -1,0 +1,39 @@
+/* pages/merchant/merchantData/merchantData.wxss */
+
+.head {
+    height: 134rpx !important;
+    line-height: 134rpx !important;
+}
+
+.my-menu-right image:first-child {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 8rpx;
+    float: left;
+    margin-top: 24rpx;
+    margin-right: 20rpx;
+}
+
+.my-menu-right image:last-child {
+    width: 18rpx;
+    height: 28rpx;
+    margin-left: 21rpx;
+    margin-top: 18rpx;
+}
+
+.menu-right {
+    max-width: 500rpx;
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.menu-left text {
+    font-weight: bold;
+}
+
+.menu-right text, .menu-right view {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.textx {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
